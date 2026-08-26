@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tien-Chun (Leo) Chen — Robotics & Embodied AI Engineer</title>
+<meta name="description" content="Portfolio of Tien-Chun (Leo) Chen, Robotics & Embodied AI Engineer specializing in humanoid locomotion, residual reinforcement learning, and sim-to-real control." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          bg: '#0a0e14',
+          surface: '#0f1420',
+          surface2: '#131a2b',
+          border: '#1e2740',
+          accent: '#22d3ee',
+          accent2: '#818cf8',
+          muted: '#7d8aa8',
+        },
+        fontFamily: {
+          mono: ['"JetBrains Mono"', '"Fira Code"', 'ui-monospace', 'monospace'],
+          sans: ['"Inter"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        },
+        boxShadow: {
+          glow: '0 0 40px -10px rgba(34,211,238,0.35)',
+        },
+      },
+    },
+  };
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  html { scroll-behavior: smooth; }
+  body { background-color: #0a0e14; }
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(34,211,238,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34,211,238,0.06) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+  .fade-mask {
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  }
+  .glow-text {
+    text-shadow: 0 0 30px rgba(34,211,238,0.25);
+  }
+  ::selection { background: rgba(34,211,238,0.25); color: #e6f6fb; }
+  .card {
+    background: linear-gradient(180deg, rgba(19,26,43,0.6), rgba(15,20,32,0.6));
+    border: 1px solid #1e2740;
+  }
+  .card:hover { border-color: rgba(34,211,238,0.4); }
+  .tag {
+    background: rgba(34,211,238,0.08);
+    border: 1px solid rgba(34,211,238,0.25);
+    color: #67e8f9;
+  }
+  .nav-link { position: relative; }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: -4px;
+    height: 1px;
+    background: #22d3ee;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .25s ease;
+  }
+  .nav-link:hover::after { transform: scaleX(1); }
+  @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+  .cursor-blink { animation: blink 1s step-end infinite; }
+</style>
+</head>
+<body class="bg-bg text-slate-200 font-sans antialiased">
+
+  <!-- NAV -->
+  <header class="fixed top-0 inset-x-0 z-50 border-b border-border/80 bg-bg/80 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#top" class="font-mono text-sm text-accent tracking-widest">TC<span class="text-slate-500">.</span>CHEN</a>
+      <nav class="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-widest text-muted">
+        <a href="#about" class="nav-link hover:text-accent transition-colors">About</a>
+        <a href="#experience" class="nav-link hover:text-accent transition-colors">Experience</a>
+        <a href="#projects" class="nav-link hover:text-accent transition-colors">Projects</a>
+        <a href="#skills" class="nav-link hover:text-accent transition-colors">Skills</a>
+        <a href="#education" class="nav-link hover:text-accent transition-colors">Education</a>
+        <a href="#contact" class="nav-link hover:text-accent transition-colors">Contact</a>
+      </nav>
+      <a href="#contact" class="hidden md:inline-flex items-center gap-2 rounded-full border border-accent/40 text-accent px-4 py-1.5 text-xs font-mono uppercase tracking-widest hover:bg-accent/10 transition-colors">
+        Get in touch
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="top" class="relative overflow-hidden pt-40 pb-28 px-6">
+    <div class="absolute inset-0 grid-bg fade-mask opacity-70"></div>
+    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[560px] h-[560px] rounded-full bg-accent/10 blur-[120px]"></div>
+    <div class="relative max-w-6xl mx-auto">
+      <p class="font-mono text-accent text-sm tracking-widest mb-5">
+        <span class="text-slate-500">$</span> whoami <span class="cursor-blink">▍</span>
+      </p>
+      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-[1.1] glow-text">
+        Tien-Chun (Leo) Chen
+      </h1>
+      <p class="mt-4 text-xl sm:text-2xl font-semibold text-accent2">
+        Robotics &amp; Embodied AI Engineer
+      </p>
+      <p class="mt-6 max-w-2xl text-muted text-base sm:text-lg leading-relaxed">
+        3+ years across humanoid robotics and autonomous mobile fleets — specialized in
+        <span class="text-slate-200">hybrid residual reinforcement learning</span>,
+        controlling complex nonlinear mechanisms, and deploying robust
+        <span class="text-slate-200">sim-to-real</span> pipelines.
+      </p>
+
+      <div class="mt-8 flex flex-wrap items-center gap-4">
+        <a href="mailto:leokim10073@gmail.com" class="inline-flex items-center gap-2 rounded-md bg-accent text-bg font-semibold px-5 py-2.5 text-sm hover:bg-cyan-300 transition-colors shadow-glow">
+          Email Me
+        </a>
+        <a href="https://www.linkedin.com/in/chentienchun" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-md border border-border px-5 py-2.5 text-sm font-semibold text-slate-200 hover:border-accent/50 hover:text-accent transition-colors">
+          LinkedIn ↗
+        </a>
+        <span class="inline-flex items-center gap-2 text-muted text-sm font-mono">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_2px_rgba(52,211,153,0.6)]"></span>
+          Berkeley, CA
+        </span>
+      </div>
+
+      <div class="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-px bg-border rounded-lg overflow-hidden border border-border max-w-3xl">
+        <div class="bg-surface px-5 py-4">
+          <div class="text-2xl font-bold text-white font-mono">30<span class="text-accent">min</span></div>
+          <div class="text-xs text-muted mt-1">continuous bipedal walking</div>
+        </div>
+        <div class="bg-surface px-5 py-4">
+          <div class="text-2xl font-bold text-white font-mono">&lt;10<span class="text-accent">µs</span></div>
+          <div class="text-xs text-muted mt-1">virtual work solve latency</div>
+        </div>
+        <div class="bg-surface px-5 py-4">
+          <div class="text-2xl font-bold text-white font-mono">75→93<span class="text-accent">%</span></div>
+          <div class="text-xs text-muted mt-1">autonomous operation rate</div>
+        </div>
+        <div class="bg-surface px-5 py-4">
+          <div class="text-2xl font-bold text-white font-mono">1<span class="text-accent">kHz</span></div>
+          <div class="text-xs text-muted mt-1">realtime control loop</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="px-6 py-20 border-t border-border">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
+      <div>
+        <p class="font-mono text-xs text-accent uppercase tracking-widest mb-2">01 / Summary</p>
+        <h2 class="text-3xl font-bold text-white">About</h2>
+      </div>
+      <div class="md:col-span-2">
+        <p class="text-muted leading-relaxed text-lg">
+          Robotics &amp; Embodied AI Engineer with <span class="text-slate-200 font-medium">3+ years of experience</span>
+          spanning humanoid robotics and autonomous mobile fleets. Specialized in
+          <span class="text-slate-200 font-medium">hybrid residual reinforcement learning</span>, controlling complex
+          nonlinear mechanisms, and deploying robust <span class="text-slate-200 font-medium">sim-to-real pipelines</span>.
+          Currently pursuing an M.Eng. at UC Berkeley, focused on robotics and embedded software.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="px-6 py-20 border-t border-border bg-surface/40">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-14">
+        <p class="font-mono text-xs text-accent uppercase tracking-widest mb-2">02 / Career</p>
+        <h2 class="text-3xl font-bold text-white">Work Experience</h2>
+      </div>
+
+      <div class="space-y-10">
+        <!-- FIH -->
+        <div class="card rounded-xl p-7 sm:p-9">
+          <div class="flex flex-wrap items-start justify-between gap-3 mb-1">
+            <h3 class="text-xl font-bold text-white">Humanoid Robotics Locomotion R&amp;D Engineer</h3>
+            <span class="font-mono text-xs text-accent border border-accent/30 rounded-full px-3 py-1 whitespace-nowrap">03/2025 – 06/2026</span>
+          </div>
+          <p class="text-accent2 font-medium mb-5">FIH Co., Ltd. (Subsidiary of Foxconn Group) · Software Research Center · New Taipei, Taiwan</p>
+          <ul class="space-y-3 text-muted leading-relaxed">
+            <li class="flex gap-3"><span class="text-accent mt-1">▸</span><span>Spearheaded an architectural pivot to <span class="text-slate-200">residual reinforcement learning</span> (combining LIPM-guided baselines with learned residual policies) for the proprietary humanoid platform, achieving <span class="text-slate-200">30 minutes of continuous, stable bipedal walking</span>.</span></li>
+            <li class="flex gap-3"><span class="text-accent mt-1">▸</span><span>Engineered <span class="text-slate-200">NVIDIA Isaac Lab</span> RL pipelines — customizing domain randomization, reward shaping, and environment wrappers — to resolve action-frequency bottlenecks and achieve <span class="text-slate-200">zero-shot sim-to-real deployment</span> on the proprietary humanoid platform.</span></li>
+            <li class="flex gap-3"><span class="text-accent mt-1">▸</span><span>Aligned simulated gait dynamics to measured actuator bandwidth via <span class="text-slate-200">system identification</span>, training under stochastic latency injection to harden policies against real-world timing jitter.</span></li>
+            <li class="flex gap-3"><span class="text-accent mt-1">▸</span><span>Developed a <span class="text-slate-200">CasADi-based virtual work solver</span> (generated C++) achieving <span class="text-slate-200">&lt;10 µs solve latency</span> inside a <span class="text-slate-200">1 kHz realtime control loop</span>, with mechanism determinant checks rejecting near-singular configurations before torque dispatch.</span></li>
+            <li class="flex gap-3"><span class="text-accent mt-1">▸</span><span>Architected an <span class="text-slate-200">impedance control</span> pipeline for non-linear parallel mechanisms, with joint-level force control compensating linear-actuator non-linearities, validated by chirp-sweep frequency response.</span></li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mt-6">
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Isaac Lab</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Residual RL</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">CasADi</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Impedance Control</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Sim-to-Real</span>
+          </div>
+        </div>
+
+        <!-- Kingwaytek -->
+        <div class="card rounded-xl p-7 sm:p-9">
+          <div class="flex flex-wrap items-start justify-between gap-3 mb-1">
+            <h3 class="text-xl font-bold text-white">Autonomous Vehicle R&amp;D Software Engineer (Planning)</h3>
+            <span class="font-mono text-xs text-accent border border-accent/30 rounded-full px-3 py-1 whitespace-nowrap">05/2024 – 02/2025</span>
+          </div>
+          <p class="text-accent2 font-medium mb-5">Kingwaytek Technology Co., Ltd · Software Research Center · Taoyuan, Taiwan</p>
+          <ul class="space-y-3 text-muted leading-relaxed">
+            <li class="flex gap-3"><span class="text-accent mt-1">▸</span><span>Optimized behavioral and motion planning algorithms for autonomous driving fleets, increasing the autonomous operation rate from <span class="text-slate-200">75% to 93%</span> within complex industrial (TSMC) environments.</span></li>
+            <li class="flex gap-3"><span class="text-accent mt-1">▸</span><span>Redesigned intersection navigation by modeling junctions as <span class="text-slate-200">geometric polygons</span> beyond HD-map lane boundaries, enabling constrained trajectory generation and dynamic obstacle avoidance in confined spaces.</span></li>
+            <li class="flex gap-3"><span class="text-accent mt-1">▸</span><span>Developed <span class="text-slate-200">multi-constraint trajectory optimization</span> balancing kinematic feasibility, collision margin, and ride comfort, tuned against intervention logs from deployed vehicles.</span></li>
+            <li class="flex gap-3"><span class="text-accent mt-1">▸</span><span>Architected a fleet scheduling and autonomous docking system using <span class="text-slate-200">Autoware</span>, enabling precise automated reverse parking workflows for automated wireless charging infrastructure.</span></li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mt-6">
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Autoware</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Motion Planning</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Trajectory Optimization</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">HD Maps</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="px-6 py-20 border-t border-border">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-14">
+        <p class="font-mono text-xs text-accent uppercase tracking-widest mb-2">03 / Research</p>
+        <h2 class="text-3xl font-bold text-white">Projects</h2>
+      </div>
+
+      <div class="card rounded-xl p-7 sm:p-9 relative overflow-hidden">
+        <div class="absolute -right-16 -top-16 w-56 h-56 bg-accent2/10 blur-[80px] rounded-full"></div>
+        <div class="relative flex flex-wrap items-start justify-between gap-3 mb-1">
+          <h3 class="text-xl font-bold text-white">Embodied AI Ping-Pong Capstone</h3>
+          <span class="font-mono text-xs text-accent border border-accent/30 rounded-full px-3 py-1 whitespace-nowrap">08/2026 – present</span>
+        </div>
+        <p class="relative text-accent2 font-medium mb-5">UC Berkeley</p>
+        <ul class="relative space-y-3 text-muted leading-relaxed">
+          <li class="flex gap-3"><span class="text-accent mt-1">▸</span><span>Architecting an end-to-end <span class="text-slate-200">tactical decision-making and whole-body control</span> pipeline on sponsor Agibot's A3 humanoid platform, evolving Berkeley's baseline HITTER system to support generalized, unconstrained target selection and strike planning.</span></li>
+          <li class="flex gap-3"><span class="text-accent mt-1">▸</span><span>Spearheading full-body athletic skill training by coordinating targeted <span class="text-slate-200">motion capture (mocap)</span> data collection campaigns with the Berkeley Ping-Pong student club to drive robust sim-to-real policy learning.</span></li>
+        </ul>
+        <div class="relative flex flex-wrap gap-2 mt-6">
+          <span class="tag rounded-full px-3 py-1 text-xs font-mono">Whole-Body Control</span>
+          <span class="tag rounded-full px-3 py-1 text-xs font-mono">Motion Capture</span>
+          <span class="tag rounded-full px-3 py-1 text-xs font-mono">Humanoid Manipulation</span>
+          <span class="tag rounded-full px-3 py-1 text-xs font-mono">Sim-to-Real</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="px-6 py-20 border-t border-border bg-surface/40">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-14">
+        <p class="font-mono text-xs text-accent uppercase tracking-widest mb-2">04 / Toolbox</p>
+        <h2 class="text-3xl font-bold text-white">Technical Skills</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="card rounded-xl p-6">
+          <h3 class="font-mono text-sm text-accent uppercase tracking-widest mb-4">Programming Languages</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">C</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">C++</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Python</span>
+          </div>
+        </div>
+
+        <div class="card rounded-xl p-6">
+          <h3 class="font-mono text-sm text-accent uppercase tracking-widest mb-4">RL &amp; Simulation</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">PyTorch</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">LibTorch</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Isaac Lab / Gym</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Isaac Sim / MuJoCo</span>
+          </div>
+        </div>
+
+        <div class="card rounded-xl p-6">
+          <h3 class="font-mono text-sm text-accent uppercase tracking-widest mb-4">Control &amp; Optimization</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">CasADi</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Pinocchio</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Impedance Control</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">System Identification</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Trajectory Optimization</span>
+          </div>
+        </div>
+
+        <div class="card rounded-xl p-6">
+          <h3 class="font-mono text-sm text-accent uppercase tracking-widest mb-4">Robotics Frameworks</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">ROS / ROS2</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Autoware</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Nav2</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">MoveIt 2</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">PCL</span>
+          </div>
+        </div>
+
+        <div class="card rounded-xl p-6">
+          <h3 class="font-mono text-sm text-accent uppercase tracking-widest mb-4">Hardware, Embedded &amp; Tools</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Jetson Orin &amp; Thor</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Raspberry Pi</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Git</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Docker</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">CMake</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Linux (Ubuntu)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="px-6 py-20 border-t border-border">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-14">
+        <p class="font-mono text-xs text-accent uppercase tracking-widest mb-2">05 / Academics</p>
+        <h2 class="text-3xl font-bold text-white">Education</h2>
+      </div>
+
+      <div class="space-y-6">
+        <div class="card rounded-xl p-7 sm:p-9 flex flex-wrap items-start justify-between gap-4">
+          <div>
+            <h3 class="text-lg font-bold text-white">University of California, Berkeley</h3>
+            <p class="text-accent2 font-medium mt-1">M.Eng. in Electrical Engineering and Computer Sciences (EECS)</p>
+            <p class="text-muted text-sm mt-1">Concentration: Robotics and Embedded Software</p>
+          </div>
+          <span class="font-mono text-xs text-accent border border-accent/30 rounded-full px-3 py-1 whitespace-nowrap">Expected 05/2027</span>
+        </div>
+
+        <div class="card rounded-xl p-7 sm:p-9 flex flex-wrap items-start justify-between gap-4">
+          <div>
+            <h3 class="text-lg font-bold text-white">National Yang Ming Chiao Tung University (NYCU)</h3>
+            <p class="text-accent2 font-medium mt-1">B.S. in Mechanical Engineering; Double Major in Electrical Engineering</p>
+            <p class="text-muted text-sm mt-2">Overall GPA: 3.85/4.30 · Major GPA: 4.11/4.30</p>
+            <p class="text-muted text-sm mt-1">Academic Excellence Award — Top 3% (of 110 students), 2021 &amp; 2022</p>
+          </div>
+          <span class="font-mono text-xs text-accent border border-accent/30 rounded-full px-3 py-1 whitespace-nowrap">09/2018 – 07/2022</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="px-6 py-24 border-t border-border relative overflow-hidden">
+    <div class="absolute inset-0 grid-bg opacity-40"></div>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-accent/10 blur-[100px] rounded-full"></div>
+    <div class="relative max-w-3xl mx-auto text-center">
+      <p class="font-mono text-xs text-accent uppercase tracking-widest mb-3">06 / Contact</p>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-5">Let's build something that moves.</h2>
+      <p class="text-muted text-lg mb-10">
+        Open to conversations on humanoid locomotion, embodied AI, and robotics control. Reach out any time.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="mailto:leokim10073@gmail.com" class="inline-flex items-center gap-2 rounded-md bg-accent text-bg font-semibold px-6 py-3 text-sm hover:bg-cyan-300 transition-colors shadow-glow">
+          leokim10073@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/chentienchun" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-md border border-border px-6 py-3 text-sm font-semibold text-slate-200 hover:border-accent/50 hover:text-accent transition-colors">
+          LinkedIn Profile ↗
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="px-6 py-8 border-t border-border">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-3 text-xs text-muted font-mono">
+      <span>&copy; 2026 Tien-Chun (Leo) Chen</span>
+      <span>Built with Tailwind CSS</span>
+    </div>
+  </footer>
+
+</body>
+</html>
