@@ -85,6 +85,7 @@
       <nav class="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-widest text-muted">
         <a href="#about" class="nav-link hover:text-accent transition-colors">About</a>
         <a href="#experience" class="nav-link hover:text-accent transition-colors">Experience</a>
+        <a href="#case-study" class="nav-link hover:text-accent transition-colors">Case Study</a>
         <a href="#projects" class="nav-link hover:text-accent transition-colors">Projects</a>
         <a href="#skills" class="nav-link hover:text-accent transition-colors">Skills</a>
         <a href="#education" class="nav-link hover:text-accent transition-colors">Education</a>
@@ -226,11 +227,201 @@
     </div>
   </section>
 
+  <!-- CASE STUDY -->
+  <section id="case-study" class="px-6 py-20 border-t border-border">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-6">
+        <p class="font-mono text-xs text-accent uppercase tracking-widest mb-2">03 / Deep Dive</p>
+        <h2 class="text-3xl font-bold text-white">Case Study</h2>
+        <h3 class="text-lg sm:text-xl text-accent2 font-semibold mt-3 max-w-3xl">
+          Robust Bipedal Locomotion &amp; Sim-to-Real Pipeline on Complex Humanoid Hardware
+        </h3>
+        <p class="mt-4 max-w-3xl text-muted leading-relaxed">
+          An end-to-end engineering journey developing and deploying robust bipedal locomotion policies on a complex
+          humanoid robot platform — overcoming severe sim-to-real gaps through a hybrid architecture combining
+          analytical control theory and residual reinforcement learning.
+        </p>
+      </div>
+
+      <!-- Flowchart / Timeline Overview -->
+      <div class="relative mt-14 mb-16">
+        <div class="hidden md:block absolute top-7 left-[16.6%] right-[16.6%] h-px bg-gradient-to-r from-accent via-accent2 to-emerald-400"></div>
+        <div class="md:hidden absolute left-7 top-3 bottom-3 w-px bg-gradient-to-b from-accent via-accent2 to-emerald-400"></div>
+
+        <div class="grid md:grid-cols-3 gap-8 md:gap-6">
+          <a href="#phase-1" class="group relative flex md:flex-col items-center md:items-start gap-4 md:gap-0">
+            <span class="relative z-10 flex-shrink-0 flex items-center justify-center w-14 h-14 rounded-full bg-surface border-2 border-accent text-accent font-mono font-bold text-lg shadow-glow group-hover:bg-accent group-hover:text-bg transition-colors">01</span>
+            <div class="md:mt-5">
+              <p class="font-mono text-xs text-accent uppercase tracking-widest">Phase 1</p>
+              <p class="text-white font-semibold mt-1">Isaac Lab Simulation</p>
+              <p class="text-muted text-sm mt-1 max-w-[240px]">Policy design, reward shaping &amp; asymmetric actor-critic</p>
+            </div>
+          </a>
+
+          <a href="#phase-2" class="group relative flex md:flex-col items-center md:items-start gap-4 md:gap-0">
+            <span class="relative z-10 flex-shrink-0 flex items-center justify-center w-14 h-14 rounded-full bg-surface border-2 border-amber-400 text-amber-300 font-mono font-bold text-lg group-hover:bg-amber-400 group-hover:text-bg transition-colors">02</span>
+            <div class="md:mt-5">
+              <p class="font-mono text-xs text-amber-300 uppercase tracking-widest">Phase 2</p>
+              <p class="text-white font-semibold mt-1">The Hardware Wall</p>
+              <p class="text-muted text-sm mt-1 max-w-[240px]">QDD vs. complex drivetrain — why pure RL failed</p>
+            </div>
+          </a>
+
+          <a href="#phase-3" class="group relative flex md:flex-col items-center md:items-start gap-4 md:gap-0">
+            <span class="relative z-10 flex-shrink-0 flex items-center justify-center w-14 h-14 rounded-full bg-surface border-2 border-emerald-400 text-emerald-400 font-mono font-bold text-lg group-hover:bg-emerald-400 group-hover:text-bg transition-colors">03</span>
+            <div class="md:mt-5">
+              <p class="font-mono text-xs text-emerald-400 uppercase tracking-widest">Phase 3</p>
+              <p class="text-white font-semibold mt-1">Hybrid Control &amp; Residual Learning</p>
+              <p class="text-muted text-sm mt-1 max-w-[240px]">The breakthrough that achieved stable walking</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Phase Cards -->
+      <div class="space-y-8">
+
+        <!-- Phase 1 -->
+        <div id="phase-1" class="card rounded-xl p-7 sm:p-9 scroll-mt-24">
+          <div class="flex items-start gap-4 mb-6">
+            <span class="flex-shrink-0 w-10 h-10 rounded-full bg-accent/10 border border-accent/40 text-accent font-mono font-bold flex items-center justify-center">01</span>
+            <div>
+              <p class="font-mono text-xs text-accent uppercase tracking-widest">Phase 1</p>
+              <h4 class="text-xl font-bold text-white mt-1">Isaac Lab Simulation &amp; Policy Design</h4>
+            </div>
+          </div>
+
+          <div class="space-y-6 text-muted leading-relaxed">
+            <div>
+              <p class="font-mono text-xs text-slate-300 uppercase tracking-widest mb-2">Environment Architecture</p>
+              <p>Built scalable training workflows using <span class="text-slate-200">NVIDIA Isaac Lab</span>, structuring observation history buffers, reward shaping, and custom actuator configurations.</p>
+            </div>
+
+            <div class="rounded-lg border border-border bg-bg/40 p-5">
+              <p class="font-mono text-xs text-slate-300 uppercase tracking-widest mb-3">Taming Policy-Induced Vibration</p>
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div class="border-l-2 border-rose-400/50 pl-4">
+                  <p class="text-xs font-mono text-rose-300 uppercase tracking-widest mb-1">The Challenge</p>
+                  <p class="text-sm">Initial end-to-end policies generated overly dramatic actions, triggering violent vibrations and instability upon real-world deployment.</p>
+                </div>
+                <div class="border-l-2 border-emerald-400/50 pl-4">
+                  <p class="text-xs font-mono text-emerald-300 uppercase tracking-widest mb-1">The Mitigation</p>
+                  <p class="text-sm">Implemented strict action-rate penalties and multi-component reward shaping — balancing gait phase synchronization, action smoothness, and foot clearance height.</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <p class="font-mono text-xs text-slate-300 uppercase tracking-widest mb-2">Asymmetric Actor-Critic Design</p>
+              <ul class="space-y-2">
+                <li class="flex gap-3"><span class="text-accent mt-1">▸</span><span>Injected privileged information (such as true linear velocity) into the <span class="text-slate-200">Critic</span> during training to accelerate convergence.</span></li>
+                <li class="flex gap-3"><span class="text-accent mt-1">▸</span><span>Restricted the <span class="text-slate-200">Actor</span> to angular velocity and local observations, bypassing the reality that precise linear velocity is difficult to estimate accurately on real hardware without high-end localization.</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2 mt-6">
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Isaac Lab</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Reward Shaping</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Asymmetric Actor-Critic</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Action-Rate Penalty</span>
+          </div>
+        </div>
+
+        <!-- Phase 2 -->
+        <div id="phase-2" class="card rounded-xl p-7 sm:p-9 scroll-mt-24 relative overflow-hidden">
+          <div class="absolute -right-20 -top-20 w-64 h-64 bg-amber-400/10 blur-[90px] rounded-full"></div>
+          <div class="relative flex items-start gap-4 mb-6">
+            <span class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-400/10 border border-amber-400/40 text-amber-300 font-mono font-bold flex items-center justify-center">02</span>
+            <div>
+              <p class="font-mono text-xs text-amber-300 uppercase tracking-widest">Phase 2</p>
+              <h4 class="text-xl font-bold text-white mt-1">The Hardware Wall &amp; The Failure of Pure RL</h4>
+            </div>
+          </div>
+
+          <div class="relative space-y-6 text-muted leading-relaxed">
+            <div class="rounded-lg border border-amber-400/20 bg-amber-400/5 p-5">
+              <p class="font-mono text-xs text-amber-300 uppercase tracking-widest mb-2">The Hardware Bottleneck — QDD vs. Complex Drivetrain</p>
+              <p>While robots utilizing clean <span class="text-slate-200">QDD (Quasi-Direct Drive)</span> motors can often achieve successful sim-to-real transfer with pure end-to-end RL and basic delay randomization, our platform — featuring a complex combination of <span class="text-slate-200 font-medium">28:1 planetary gear rotary motors</span> and <span class="text-slate-200 font-medium">linear motors with planetary gears</span> — presented a massive wall.</p>
+            </div>
+
+            <div>
+              <p class="font-mono text-xs text-slate-300 uppercase tracking-widest mb-2">Failure Hypothesis</p>
+              <p>Pure end-to-end RL failed on this hardware because it is virtually impossible to fully capture such intricate <span class="text-slate-200">drivetrain non-linearities</span>, <span class="text-slate-200">high backlash</span>, and <span class="text-slate-200">complex transmission dynamics</span> simply by tuning delay randomization in simulation.</p>
+            </div>
+          </div>
+
+          <div class="relative flex flex-wrap gap-2 mt-6">
+            <span class="rounded-full px-3 py-1 text-xs font-mono bg-amber-400/10 border border-amber-400/30 text-amber-200">28:1 Planetary Gear</span>
+            <span class="rounded-full px-3 py-1 text-xs font-mono bg-amber-400/10 border border-amber-400/30 text-amber-200">High Backlash</span>
+            <span class="rounded-full px-3 py-1 text-xs font-mono bg-amber-400/10 border border-amber-400/30 text-amber-200">Transmission Non-linearity</span>
+          </div>
+        </div>
+
+        <!-- Phase 3 -->
+        <div id="phase-3" class="card rounded-xl p-7 sm:p-9 scroll-mt-24 relative overflow-hidden ring-1 ring-emerald-400/20">
+          <div class="absolute -left-20 -bottom-20 w-72 h-72 bg-emerald-400/10 blur-[100px] rounded-full"></div>
+          <div class="relative flex items-start gap-4 mb-2">
+            <span class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-400/10 border border-emerald-400/40 text-emerald-300 font-mono font-bold flex items-center justify-center">03</span>
+            <div>
+              <p class="font-mono text-xs text-emerald-300 uppercase tracking-widest">Phase 3</p>
+              <h4 class="text-xl font-bold text-white mt-1">The Hybrid Control Breakthrough &amp; Solution</h4>
+            </div>
+          </div>
+          <p class="relative text-muted mb-8 mt-3">To conquer what pure RL couldn't, we engineered a rigorous hybrid pipeline:</p>
+
+          <div class="relative grid md:grid-cols-2 gap-5">
+            <div class="rounded-lg border border-border bg-bg/40 p-5">
+              <p class="font-mono text-xs text-accent uppercase tracking-widest mb-3">1 · Low-Level Analytical Solvers &amp; Safety</p>
+              <ul class="space-y-2 text-sm">
+                <li class="flex gap-2"><span class="text-accent mt-0.5">▸</span><span>Developed a <span class="text-slate-200">CasADi-based virtual work solver</span> (generated C++) running in <span class="text-slate-200">under 10 µs</span> inside a <span class="text-slate-200">1 kHz real-time control loop</span>, handling complex kinematics for 4-bar linkages and parallel mechanisms per joint.</span></li>
+                <li class="flex gap-2"><span class="text-accent mt-0.5">▸</span><span>Implemented active <span class="text-slate-200">mechanism determinant checks</span> to reject near-singular configurations before any torque dispatch, preventing hardware self-destruction.</span></li>
+              </ul>
+            </div>
+
+            <div class="rounded-lg border border-border bg-bg/40 p-5">
+              <p class="font-mono text-xs text-accent uppercase tracking-widest mb-3">2 · Impedance Control &amp; Bandwidth Tuning</p>
+              <ul class="space-y-2 text-sm">
+                <li class="flex gap-2"><span class="text-accent mt-0.5">▸</span><span>Architected an <span class="text-slate-200">impedance control</span> pipeline for non-linear parallel mechanisms, applying joint-level force control to compensate for linear-actuator non-linearities.</span></li>
+                <li class="flex gap-2"><span class="text-accent mt-0.5">▸</span><span>Validated tuning via <span class="text-slate-200">chirp-sweep frequency response</span> to identify optimal proportional (K<sub>p</sub>) and derivative (K<sub>d</sub>) gains.</span></li>
+              </ul>
+            </div>
+
+            <div class="rounded-lg border border-border bg-bg/40 p-5">
+              <p class="font-mono text-xs text-accent uppercase tracking-widest mb-3">3 · Robustness Hardening</p>
+              <ul class="space-y-2 text-sm">
+                <li class="flex gap-2"><span class="text-accent mt-0.5">▸</span><span>Simulated delayed PD actuators by randomizing timing delays (<span class="text-slate-200">1–6 time steps</span>) alongside link and base CoM variations, aligning with the <span class="text-slate-200">0.001 s (dt)</span> interval of the <span class="text-slate-200">1000 Hz</span> real-time loop.</span></li>
+              </ul>
+            </div>
+
+            <div class="rounded-lg border border-emerald-400/30 bg-emerald-400/5 p-5">
+              <p class="font-mono text-xs text-emerald-300 uppercase tracking-widest mb-3">4 · The Ultimate Solution — Residual Learning via LIPM</p>
+              <ul class="space-y-2 text-sm">
+                <li class="flex gap-2"><span class="text-emerald-300 mt-0.5">▸</span><span><span class="text-slate-200">System Identification:</span> performed joint-level ID, revealing a minimum un-delayed response time around 1 Hz and an actuator bandwidth near 5 Hz.</span></li>
+                <li class="flex gap-2"><span class="text-emerald-300 mt-0.5">▸</span><span><span class="text-slate-200">The Hybrid Strategy:</span> utilized an analytical <span class="text-slate-200">Linear Inverted Pendulum Model (LIPM)</span> as the primary trajectory generator, commanding a smooth 0.8 Hz trajectory with a 5 cm foot height — well within actuator bandwidth.</span></li>
+                <li class="flex gap-2"><span class="text-emerald-300 mt-0.5">▸</span><span><span class="text-slate-200">The Result:</span> deployed a model-free residual policy to handle unmodeled disturbances, successfully achieving prolonged, continuous stable bipedal walking.</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="relative flex flex-wrap gap-2 mt-6">
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">CasADi Virtual Work Solver</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">LIPM</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Residual RL</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Chirp-Sweep Tuning</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Impedance Control</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- PROJECTS -->
-  <section id="projects" class="px-6 py-20 border-t border-border">
+  <section id="projects" class="px-6 py-20 border-t border-border bg-surface/40">
     <div class="max-w-6xl mx-auto">
       <div class="mb-14">
-        <p class="font-mono text-xs text-accent uppercase tracking-widest mb-2">03 / Research</p>
+        <p class="font-mono text-xs text-accent uppercase tracking-widest mb-2">04 / Research</p>
         <h2 class="text-3xl font-bold text-white">Projects</h2>
       </div>
 
@@ -256,10 +447,10 @@
   </section>
 
   <!-- SKILLS -->
-  <section id="skills" class="px-6 py-20 border-t border-border bg-surface/40">
+  <section id="skills" class="px-6 py-20 border-t border-border">
     <div class="max-w-6xl mx-auto">
       <div class="mb-14">
-        <p class="font-mono text-xs text-accent uppercase tracking-widest mb-2">04 / Toolbox</p>
+        <p class="font-mono text-xs text-accent uppercase tracking-widest mb-2">05 / Toolbox</p>
         <h2 class="text-3xl font-bold text-white">Technical Skills</h2>
       </div>
 
@@ -321,10 +512,10 @@
   </section>
 
   <!-- EDUCATION -->
-  <section id="education" class="px-6 py-20 border-t border-border">
+  <section id="education" class="px-6 py-20 border-t border-border bg-surface/40">
     <div class="max-w-6xl mx-auto">
       <div class="mb-14">
-        <p class="font-mono text-xs text-accent uppercase tracking-widest mb-2">05 / Academics</p>
+        <p class="font-mono text-xs text-accent uppercase tracking-widest mb-2">06 / Academics</p>
         <h2 class="text-3xl font-bold text-white">Education</h2>
       </div>
 
@@ -356,7 +547,7 @@
     <div class="absolute inset-0 grid-bg opacity-40"></div>
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-accent/10 blur-[100px] rounded-full"></div>
     <div class="relative max-w-3xl mx-auto text-center">
-      <p class="font-mono text-xs text-accent uppercase tracking-widest mb-3">06 / Contact</p>
+      <p class="font-mono text-xs text-accent uppercase tracking-widest mb-3">07 / Contact</p>
       <h2 class="text-3xl sm:text-4xl font-bold text-white mb-5">Let's build something that moves.</h2>
       <p class="text-muted text-lg mb-10">
         Open to conversations on humanoid locomotion, embodied AI, and robotics control. Reach out any time.
