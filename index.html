@@ -218,6 +218,9 @@
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">Trajectory Optimization</span>
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">HD Maps</span>
           </div>
+          <a href="#av-case-study" class="inline-flex items-center gap-2 mt-7 rounded-md border border-accent/40 text-accent px-4 py-2 text-xs font-mono uppercase tracking-widest hover:bg-accent/10 hover:border-accent transition-colors">
+            Read Technical Case Study ↓
+          </a>
         </div>
       </div>
     </div>
@@ -416,40 +419,156 @@
     </div>
   </section>
 
+  <!-- AV CASE STUDY -->
+  <section id="av-case-study" class="px-6 py-20 border-t border-border bg-surface/40 scroll-mt-24">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-6">
+        <p class="font-mono text-xs text-accent uppercase tracking-widest mb-3">04 / Deep Dive &bull; Case Study</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white leading-tight max-w-3xl">
+          Industrial Autonomous Vehicle Fleet &amp; Motion Planning
+        </h2>
+        <p class="mt-4 max-w-3xl text-muted leading-relaxed">
+          Scaling <span class="text-slate-200">behavior planning</span> and motion planning algorithms for autonomous
+          driving fleets operating inside confined, safety-critical industrial environments — combining
+          <span class="text-slate-200">freespace planning</span> for unmapped junctions and dynamic obstacles with
+          constrained trajectory generation for fleet-wide deployment.
+        </p>
+      </div>
+
+      <div class="space-y-8 mt-14">
+        <!-- 1: Fleet Scalability -->
+        <div class="card rounded-xl p-7 sm:p-9">
+          <div class="flex items-start gap-4 mb-4">
+            <span class="flex-shrink-0 w-10 h-10 rounded-full bg-accent/10 border border-accent/40 text-accent font-mono font-bold flex items-center justify-center">01</span>
+            <div>
+              <p class="font-mono text-xs text-accent uppercase tracking-widest">Fleet Scalability</p>
+              <h4 class="text-xl font-bold text-white mt-1">Real-World Deployments at Scale</h4>
+            </div>
+          </div>
+          <p class="text-muted leading-relaxed">
+            Optimized <span class="text-slate-200">behavior planning</span> and motion planning algorithms for autonomous driving fleets, scaling the autonomous operation rate from <span class="text-slate-200">75% to 93%</span> within complex, constrained industrial (TSMC) environments.
+          </p>
+        </div>
+
+        <!-- 2: Geometric Polygon Junction Modeling -->
+        <div class="card rounded-xl p-7 sm:p-9">
+          <div class="flex items-start gap-4 mb-4">
+            <span class="flex-shrink-0 w-10 h-10 rounded-full bg-accent/10 border border-accent/40 text-accent font-mono font-bold flex items-center justify-center">02</span>
+            <div>
+              <p class="font-mono text-xs text-accent uppercase tracking-widest">Junction Modeling</p>
+              <h4 class="text-xl font-bold text-white mt-1">Geometric Polygon Junction Modeling</h4>
+            </div>
+          </div>
+          <p class="text-muted leading-relaxed">
+            Redesigned intersection navigation using <span class="text-slate-200">freespace planning</span> — modeling junctions as <span class="text-slate-200">geometric polygons</span> beyond standard HD-map lane boundaries — to enable constrained trajectory generation and dynamic obstacle avoidance in unmapped, confined spaces.
+          </p>
+        </div>
+
+        <!-- 3: Trajectory Optimization & Autoware -->
+        <div class="card rounded-xl p-7 sm:p-9">
+          <div class="flex items-start gap-4 mb-4">
+            <span class="flex-shrink-0 w-10 h-10 rounded-full bg-accent/10 border border-accent/40 text-accent font-mono font-bold flex items-center justify-center">03</span>
+            <div>
+              <p class="font-mono text-xs text-accent uppercase tracking-widest">Trajectory Optimization</p>
+              <h4 class="text-xl font-bold text-white mt-1">Multi-Constraint Trajectory Optimization &amp; Autoware</h4>
+            </div>
+          </div>
+          <p class="text-muted leading-relaxed">
+            Developed <span class="text-slate-200">multi-constraint trajectory optimization</span> balancing kinematic feasibility, collision margin, and ride comfort — integrated with <span class="text-slate-200">Autoware</span> to drive automated docking and reverse-parking workflows for wireless charging infrastructure.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-2 mt-8">
+        <span class="tag rounded-full px-3 py-1 text-xs font-mono">Autoware</span>
+        <span class="tag rounded-full px-3 py-1 text-xs font-mono">Motion Planning</span>
+        <span class="tag rounded-full px-3 py-1 text-xs font-mono">Behavior Planning</span>
+        <span class="tag rounded-full px-3 py-1 text-xs font-mono">Freespace Planning</span>
+        <span class="tag rounded-full px-3 py-1 text-xs font-mono">Trajectory Optimization</span>
+        <span class="tag rounded-full px-3 py-1 text-xs font-mono">HD Maps</span>
+        <span class="tag rounded-full px-3 py-1 text-xs font-mono">Fleet Management</span>
+        <span class="tag rounded-full px-3 py-1 text-xs font-mono">Sim-to-Real</span>
+      </div>
+    </div>
+  </section>
+
   <!-- PROJECTS -->
-  <section id="projects" class="px-6 py-20 border-t border-border bg-surface/40">
+  <section id="projects" class="px-6 py-20 border-t border-border">
     <div class="max-w-6xl mx-auto">
       <div class="mb-14">
-        <p class="font-mono text-xs text-accent uppercase tracking-widest mb-2">04 / Research</p>
+        <p class="font-mono text-xs text-accent uppercase tracking-widest mb-2">05 / Research</p>
         <h2 class="text-3xl font-bold text-white">Projects</h2>
       </div>
 
-      <div class="card rounded-xl p-7 sm:p-9 relative overflow-hidden">
-        <div class="absolute -right-16 -top-16 w-56 h-56 bg-accent2/10 blur-[80px] rounded-full"></div>
-        <div class="relative flex flex-wrap items-start justify-between gap-3 mb-1">
-          <h3 class="text-xl font-bold text-white">Embodied AI Ping-Pong Capstone</h3>
-          <span class="font-mono text-xs text-accent border border-accent/30 rounded-full px-3 py-1 whitespace-nowrap">08/2026 – present</span>
+      <div class="space-y-8">
+        <div class="card rounded-xl p-7 sm:p-9 relative overflow-hidden">
+          <div class="absolute -right-16 -top-16 w-56 h-56 bg-accent2/10 blur-[80px] rounded-full"></div>
+          <div class="relative flex flex-wrap items-start justify-between gap-3 mb-1">
+            <h3 class="text-xl font-bold text-white">Embodied AI Ping-Pong Capstone</h3>
+            <span class="font-mono text-xs text-accent border border-accent/30 rounded-full px-3 py-1 whitespace-nowrap">08/2026 – present</span>
+          </div>
+          <p class="relative text-accent2 font-medium mb-5">UC Berkeley</p>
+          <ul class="relative space-y-3 text-muted leading-relaxed">
+            <li class="flex gap-3"><span class="text-accent mt-1">▸</span><span>Architecting an end-to-end <span class="text-slate-200">tactical decision-making and whole-body control</span> pipeline on sponsor Agibot's A3 humanoid platform, evolving Berkeley's baseline HITTER system to support generalized, unconstrained target selection and strike planning.</span></li>
+            <li class="flex gap-3"><span class="text-accent mt-1">▸</span><span>Spearheading full-body athletic skill training by coordinating targeted <span class="text-slate-200">motion capture (mocap)</span> data collection campaigns with the Berkeley Ping-Pong student club to drive robust sim-to-real policy learning.</span></li>
+          </ul>
+          <div class="relative flex flex-wrap gap-2 mt-6">
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Whole-Body Control</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Motion Capture</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Humanoid Manipulation</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Sim-to-Real</span>
+          </div>
         </div>
-        <p class="relative text-accent2 font-medium mb-5">UC Berkeley</p>
-        <ul class="relative space-y-3 text-muted leading-relaxed">
-          <li class="flex gap-3"><span class="text-accent mt-1">▸</span><span>Architecting an end-to-end <span class="text-slate-200">tactical decision-making and whole-body control</span> pipeline on sponsor Agibot's A3 humanoid platform, evolving Berkeley's baseline HITTER system to support generalized, unconstrained target selection and strike planning.</span></li>
-          <li class="flex gap-3"><span class="text-accent mt-1">▸</span><span>Spearheading full-body athletic skill training by coordinating targeted <span class="text-slate-200">motion capture (mocap)</span> data collection campaigns with the Berkeley Ping-Pong student club to drive robust sim-to-real policy learning.</span></li>
-        </ul>
-        <div class="relative flex flex-wrap gap-2 mt-6">
-          <span class="tag rounded-full px-3 py-1 text-xs font-mono">Whole-Body Control</span>
-          <span class="tag rounded-full px-3 py-1 text-xs font-mono">Motion Capture</span>
-          <span class="tag rounded-full px-3 py-1 text-xs font-mono">Humanoid Manipulation</span>
-          <span class="tag rounded-full px-3 py-1 text-xs font-mono">Sim-to-Real</span>
+
+        <div class="card rounded-xl p-7 sm:p-9 relative overflow-hidden">
+          <div class="absolute -right-16 -top-16 w-56 h-56 bg-accent/10 blur-[80px] rounded-full"></div>
+          <div class="relative flex flex-wrap items-start justify-between gap-3 mb-1">
+            <h3 class="text-xl font-bold text-white">Differential-Drive AMR Research</h3>
+            <span class="font-mono text-xs text-accent border border-accent/30 rounded-full px-3 py-1 whitespace-nowrap">12/2021 – 06/2022</span>
+          </div>
+          <p class="relative text-accent2 font-medium mb-5">Undergraduate Research Assistant · Networked Control Robotics Lab, NYCU (Prof. Teng-Hu Cheng)</p>
+          <ul class="relative space-y-3 text-muted leading-relaxed">
+            <li class="flex gap-3"><span class="text-accent mt-1">▸</span><span>Engineered a differential-drive AMR integrating hardware power/sensor systems and core control components.</span></li>
+            <li class="flex gap-3"><span class="text-accent mt-1">▸</span><span>Developed a complete <span class="text-slate-200">ROS navigation stack with AMCL localization</span> for autonomous waypoint navigation and obstacle avoidance.</span></li>
+            <li class="flex gap-3"><span class="text-accent mt-1">▸</span><span>Built a robust <span class="text-slate-200">multi-sensor fusion SLAM</span> system integrating dual LiDARs, encoder odometry, and IMU signals with precise extrinsic calibration in <span class="text-slate-200">ROS Cartographer</span> to eliminate field-of-view blind spots.</span></li>
+          </ul>
+          <div class="relative flex flex-wrap gap-2 mt-6">
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">ROS Navigation</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">AMCL</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">ROS Cartographer</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Sensor Fusion</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">SLAM</span>
+          </div>
+        </div>
+
+        <div class="card rounded-xl p-7 sm:p-9 relative overflow-hidden">
+          <div class="absolute -right-16 -top-16 w-56 h-56 bg-accent2/10 blur-[80px] rounded-full"></div>
+          <div class="relative flex flex-wrap items-start justify-between gap-3 mb-1">
+            <h3 class="text-xl font-bold text-white">Vision-Based Manipulation and Grasping</h3>
+            <span class="font-mono text-xs text-accent border border-accent/30 rounded-full px-3 py-1 whitespace-nowrap">02/2024 – 04/2024</span>
+          </div>
+          <p class="relative text-accent2 font-medium mb-5">Robotics Masterclass Capstone</p>
+          <ul class="relative space-y-3 text-muted leading-relaxed">
+            <li class="flex gap-3"><span class="text-accent mt-1">▸</span><span>Engineered a robust <span class="text-slate-200">pose estimation and pick-and-place pipeline</span> by enforcing top-down kinematic constraints, <span class="text-slate-200">Least Squares circle fitting</span>, and dynamic collision scene updates to ensure reliable execution under noisy point-cloud conditions.</span></li>
+            <li class="flex gap-3"><span class="text-accent mt-1">▸</span><span>Architected a <span class="text-slate-200">containerized (Docker) control stack</span> bridging a web UI with a <span class="text-slate-200">ROS2 action server</span> for seamless sim-to-real transfer.</span></li>
+          </ul>
+          <div class="relative flex flex-wrap gap-2 mt-6">
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">ROS2</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Docker</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Computer Vision</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Pose Estimation</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Manipulation</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- SKILLS -->
-  <section id="skills" class="px-6 py-20 border-t border-border">
+  <section id="skills" class="px-6 py-20 border-t border-border bg-surface/40">
     <div class="max-w-6xl mx-auto">
       <div class="mb-14">
-        <p class="font-mono text-xs text-accent uppercase tracking-widest mb-2">05 / Toolbox</p>
+        <p class="font-mono text-xs text-accent uppercase tracking-widest mb-2">06 / Toolbox</p>
         <h2 class="text-3xl font-bold text-white">Technical Skills</h2>
       </div>
 
@@ -511,10 +630,10 @@
   </section>
 
   <!-- EDUCATION -->
-  <section id="education" class="px-6 py-20 border-t border-border bg-surface/40">
+  <section id="education" class="px-6 py-20 border-t border-border">
     <div class="max-w-6xl mx-auto">
       <div class="mb-14">
-        <p class="font-mono text-xs text-accent uppercase tracking-widest mb-2">06 / Academics</p>
+        <p class="font-mono text-xs text-accent uppercase tracking-widest mb-2">07 / Academics</p>
         <h2 class="text-3xl font-bold text-white">Education</h2>
       </div>
 
@@ -546,7 +665,7 @@
     <div class="absolute inset-0 grid-bg opacity-40"></div>
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-accent/10 blur-[100px] rounded-full"></div>
     <div class="relative max-w-3xl mx-auto text-center">
-      <p class="font-mono text-xs text-accent uppercase tracking-widest mb-3">07 / Contact</p>
+      <p class="font-mono text-xs text-accent uppercase tracking-widest mb-3">08 / Contact</p>
       <h2 class="text-3xl sm:text-4xl font-bold text-white mb-5">Let's build something that moves.</h2>
       <p class="text-muted text-lg mb-10">
         Open to conversations on humanoid locomotion, embodied AI, and robotics control. Reach out any time.
