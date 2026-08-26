@@ -294,7 +294,7 @@
           <div class="space-y-6 text-muted leading-relaxed">
             <div>
               <p class="font-mono text-xs text-slate-300 uppercase tracking-widest mb-2">Environment Architecture</p>
-              <p>Built scalable training workflows using <span class="text-slate-200">NVIDIA Isaac Lab</span>, structuring observation history buffers, reward shaping, and custom actuator configurations.</p>
+              <p>Engineered scalable end-to-end RL training pipelines leveraging the full manager-based architecture of <span class="text-slate-200">NVIDIA Isaac Lab</span> — comprehensively configuring observation/action managers, multi-term reward shaping, curriculum learning, and extensive domain randomization.</p>
             </div>
 
             <div class="rounded-lg border border-border bg-bg/40 p-5">
@@ -321,10 +321,12 @@
           </div>
 
           <div class="flex flex-wrap gap-2 mt-6">
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Isaac Lab</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Reward Shaping</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Isaac Lab (Manager-Based)</span>
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">Asymmetric Actor-Critic</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Action-Rate Penalty</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Privileged Information</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Multi-Term Reward Shaping</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Domain Randomization</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Curriculum Learning</span>
           </div>
         </div>
 
@@ -341,20 +343,23 @@
 
           <div class="relative space-y-6 text-muted leading-relaxed">
             <div class="rounded-lg border border-amber-400/20 bg-amber-400/5 p-5">
-              <p class="font-mono text-xs text-amber-300 uppercase tracking-widest mb-2">The Hardware Bottleneck — QDD vs. Complex Drivetrain</p>
-              <p>While robots utilizing clean <span class="text-slate-200">QDD (Quasi-Direct Drive)</span> motors can often achieve successful sim-to-real transfer with pure end-to-end RL and basic delay randomization, our platform — featuring a complex combination of <span class="text-slate-200 font-medium">28:1 planetary gear rotary motors</span> and <span class="text-slate-200 font-medium">linear motors with planetary gears</span> — presented a massive wall.</p>
+              <p class="font-mono text-xs text-amber-300 uppercase tracking-widest mb-2">The Hardware Bottleneck — QDD vs. High-Reduction Actuator</p>
+              <p>While robots utilizing clean <span class="text-slate-200">QDD (Quasi-Direct Drive)</span> motors can often achieve successful <span class="text-slate-200">sim-to-real</span> transfer with pure end-to-end RL and basic delay randomization, our platform — driven by a <span class="text-slate-200">high-reduction actuator</span> architecture combining 28:1 planetary gear rotary motors and linear motors with planetary gears — presented a massive wall.</p>
             </div>
 
             <div>
               <p class="font-mono text-xs text-slate-300 uppercase tracking-widest mb-2">Failure Hypothesis</p>
-              <p>Pure end-to-end RL failed on this hardware because it is virtually impossible to fully capture such intricate <span class="text-slate-200">drivetrain non-linearities</span>, <span class="text-slate-200">high backlash</span>, and <span class="text-slate-200">complex transmission dynamics</span> simply by tuning delay randomization in simulation.</p>
+              <p>Pure end-to-end RL failed on this hardware because it is virtually impossible to fully capture such intricate <span class="text-slate-200">drivetrain non-linearities</span>, <span class="text-slate-200">high backlash</span>, and <span class="text-slate-200">complex transmission dynamics</span> simply by tuning delay randomization in simulation — closing that gap required rigorous <span class="text-slate-200">system identification</span> of the true actuator dynamics.</p>
             </div>
           </div>
 
           <div class="relative flex flex-wrap gap-2 mt-6">
-            <span class="rounded-full px-3 py-1 text-xs font-mono bg-amber-400/10 border border-amber-400/30 text-amber-200">28:1 Planetary Gear</span>
+            <span class="rounded-full px-3 py-1 text-xs font-mono bg-amber-400/10 border border-amber-400/30 text-amber-200">Sim-to-Real</span>
+            <span class="rounded-full px-3 py-1 text-xs font-mono bg-amber-400/10 border border-amber-400/30 text-amber-200">QDD vs. High-Reduction Actuator</span>
+            <span class="rounded-full px-3 py-1 text-xs font-mono bg-amber-400/10 border border-amber-400/30 text-amber-200">Planetary Gearbox</span>
+            <span class="rounded-full px-3 py-1 text-xs font-mono bg-amber-400/10 border border-amber-400/30 text-amber-200">Transmission Non-Linearity</span>
             <span class="rounded-full px-3 py-1 text-xs font-mono bg-amber-400/10 border border-amber-400/30 text-amber-200">High Backlash</span>
-            <span class="rounded-full px-3 py-1 text-xs font-mono bg-amber-400/10 border border-amber-400/30 text-amber-200">Transmission Non-linearity</span>
+            <span class="rounded-full px-3 py-1 text-xs font-mono bg-amber-400/10 border border-amber-400/30 text-amber-200">Actuator Dynamics</span>
           </div>
         </div>
 
@@ -405,11 +410,10 @@
           </div>
 
           <div class="relative flex flex-wrap gap-2 mt-6">
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">CasADi Virtual Work Solver</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">LIPM</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Residual RL</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Chirp-Sweep Tuning</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">System Identification</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Real-Time Optimization (CasADi)</span>
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">Impedance Control</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Residual Learning (LIPM)</span>
           </div>
         </div>
 
