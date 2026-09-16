@@ -528,14 +528,14 @@
             <span class="font-mono text-xs text-accent border border-accent/30 rounded-full px-3 py-1 whitespace-nowrap">02/2024 – 04/2024</span>
           </div>
           <p class="relative text-accent2 font-medium mb-5">Robotics Masterclass Capstone</p>
-          <ul class="relative space-y-3 text-muted leading-relaxed">
-            <li class="flex gap-3"><span class="text-accent mt-1">▸</span><span>Engineered a robust <span class="text-slate-200">pose estimation and pick-and-place pipeline</span> by enforcing top-down kinematic constraints, <span class="text-slate-200">Least Squares circle fitting</span>, and dynamic collision scene updates to ensure reliable execution under noisy point-cloud conditions.</span></li>
-            <li class="flex gap-3"><span class="text-accent mt-1">▸</span><span>Architected a <span class="text-slate-200">containerized (Docker) control stack</span> bridging a web UI with a <span class="text-slate-200">ROS2 action server</span> for seamless sim-to-real transfer.</span></li>
-          </ul>
+          <p class="relative text-muted leading-relaxed">
+            Engineered an end-to-end vision-guided manipulation pipeline using <span class="text-slate-200">MoveIt 2</span>, combining <span class="text-slate-200">6-DOF grasp pose estimation</span> (Least Squares circle fitting with top-down kinematic constraints) and <span class="text-slate-200">dynamic planning scene updates</span> to achieve collision-free pick-and-place across <span class="text-slate-200">Gazebo</span> and physical hardware.
+          </p>
           <div class="relative flex flex-wrap gap-2 mt-6">
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">ROS2</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">ROS 2</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">MoveIt 2</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Gazebo</span>
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">Docker</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Computer Vision</span>
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">Pose Estimation</span>
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">Manipulation</span>
           </div>
@@ -573,57 +573,78 @@
         <h2 class="text-3xl font-bold text-white">Technical Skills</h2>
       </div>
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid sm:grid-cols-2 gap-6">
         <div class="card rounded-xl p-6">
-          <h3 class="font-mono text-sm text-accent uppercase tracking-widest mb-4">Programming Languages</h3>
+          <h3 class="font-mono text-sm text-accent uppercase tracking-widest mb-4">Robotic Control &amp; Optimization</h3>
           <div class="flex flex-wrap gap-2">
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">C</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">C++</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Python</span>
-          </div>
-        </div>
-
-        <div class="card rounded-xl p-6">
-          <h3 class="font-mono text-sm text-accent uppercase tracking-widest mb-4">RL &amp; Simulation</h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">PyTorch</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">LibTorch</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Isaac Lab / Gym</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Isaac Sim / MuJoCo</span>
-          </div>
-        </div>
-
-        <div class="card rounded-xl p-6">
-          <h3 class="font-mono text-sm text-accent uppercase tracking-widest mb-4">Control &amp; Optimization</h3>
-          <div class="flex flex-wrap gap-2">
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Whole-Body Control (WBC)</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Bipedal Locomotion</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Robotic Manipulation</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Impedance &amp; Force Control</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Kinematics &amp; Dynamics</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Trajectory Optimization</span>
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">CasADi</span>
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">Pinocchio</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Impedance Control</span>
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">System Identification</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Trajectory Optimization</span>
+          </div>
+        </div>
+
+        <div class="card rounded-xl p-6">
+          <h3 class="font-mono text-sm text-accent uppercase tracking-widest mb-4">Robot Learning &amp; Simulation</h3>
+          <div class="space-y-4">
+            <div>
+              <p class="font-mono text-xs text-slate-300 uppercase tracking-widest mb-2">Robot Learning</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Deep RL (PPO, Residual RL)</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">PyTorch</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">LibTorch</span>
+              </div>
+            </div>
+            <div>
+              <p class="font-mono text-xs text-slate-300 uppercase tracking-widest mb-2">Simulation &amp; Physics</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">NVIDIA Isaac Lab / Gym</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Isaac Sim</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">MuJoCo</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Gazebo</span>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="card rounded-xl p-6">
           <h3 class="font-mono text-sm text-accent uppercase tracking-widest mb-4">Robotics Frameworks</h3>
           <div class="flex flex-wrap gap-2">
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">ROS / ROS2</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">ROS / ROS 2</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">MoveIt 2</span>
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">Autoware</span>
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">Nav2</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">MoveIt 2</span>
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">PCL</span>
           </div>
         </div>
 
         <div class="card rounded-xl p-6">
-          <h3 class="font-mono text-sm text-accent uppercase tracking-widest mb-4">Hardware, Embedded &amp; Tools</h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Jetson Orin &amp; Thor</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Raspberry Pi</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Git</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Docker</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">CMake</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Linux (Ubuntu)</span>
+          <h3 class="font-mono text-sm text-accent uppercase tracking-widest mb-4">Programming Languages &amp; Tools</h3>
+          <div class="space-y-4">
+            <div>
+              <p class="font-mono text-xs text-slate-300 uppercase tracking-widest mb-2">Languages</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">C</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">C++</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Python</span>
+              </div>
+            </div>
+            <div>
+              <p class="font-mono text-xs text-slate-300 uppercase tracking-widest mb-2">Tools &amp; Hardware</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Jetson Orin &amp; Thor</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Raspberry Pi</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Docker</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Git</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">CMake</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Linux (Ubuntu)</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
