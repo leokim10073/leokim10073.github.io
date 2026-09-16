@@ -192,11 +192,11 @@
             Led the R&amp;D of bipedal locomotion algorithms and sim-to-real deployment pipelines for proprietary humanoid platforms.
           </p>
           <div class="flex flex-wrap gap-2 mt-6">
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Isaac Lab</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Residual RL</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">CasADi</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Impedance Control</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Isaac Lab / Isaac Sim</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Deep Reinforcement Learning</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Impedance &amp; Force Control</span>
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">Sim-to-Real</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">ROS 2</span>
           </div>
           <a href="#case-study" class="inline-flex items-center gap-2 mt-7 rounded-md border border-accent/40 text-accent px-4 py-2 text-xs font-mono uppercase tracking-widest hover:bg-accent/10 hover:border-accent transition-colors">
             Read Technical Case Study ↓
@@ -218,6 +218,8 @@
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">Motion Planning</span>
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">Trajectory Optimization</span>
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">HD Maps</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Sim-to-Real</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">ROS 2</span>
           </div>
           <a href="#av-case-study" class="inline-flex items-center gap-2 mt-7 rounded-md border border-accent/40 text-accent px-4 py-2 text-xs font-mono uppercase tracking-widest hover:bg-accent/10 hover:border-accent transition-colors">
             Read Technical Case Study ↓
@@ -320,13 +322,12 @@
           </div>
 
           <div class="flex flex-wrap gap-2 mt-6">
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Isaac Lab (Manager-Based)</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Asymmetric Actor-Critic</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Privileged Information</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Multi-Term Reward Shaping</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Isaac Lab</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Deep Reinforcement Learning</span>
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">Domain Randomization</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Reward Shaping</span>
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">Curriculum Learning</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Residual Reinforcement Learning</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Privileged Information</span>
           </div>
         </div>
 
@@ -349,7 +350,7 @@
 
             <div>
               <p class="font-mono text-xs text-slate-300 uppercase tracking-widest mb-2">Failure Hypothesis</p>
-              <p>Pure end-to-end RL failed on this hardware because it is virtually impossible to fully capture such intricate <span class="text-slate-200">drivetrain non-linearities</span>, <span class="text-slate-200">high backlash</span>, and <span class="text-slate-200">complex transmission dynamics</span> simply by tuning delay randomization in simulation — closing that gap required rigorous <span class="text-slate-200">system identification</span> of the true actuator dynamics.</p>
+              <p>Pure end-to-end RL failed on this hardware because it is virtually impossible to fully capture such intricate <span class="text-slate-200">drivetrain non-linearities</span> and <span class="text-slate-200">complex transmission dynamics</span> introduced by a <span class="text-slate-200">high-reduction</span> gear train simply by tuning delay randomization in simulation — closing that gap required rigorous <span class="text-slate-200">system identification</span> of the true actuator dynamics.</p>
             </div>
           </div>
 
@@ -358,7 +359,6 @@
             <span class="rounded-full px-3 py-1 text-xs font-mono bg-amber-400/10 border border-amber-400/30 text-amber-200">QDD vs. High-Reduction Actuator</span>
             <span class="rounded-full px-3 py-1 text-xs font-mono bg-amber-400/10 border border-amber-400/30 text-amber-200">Planetary Gearbox</span>
             <span class="rounded-full px-3 py-1 text-xs font-mono bg-amber-400/10 border border-amber-400/30 text-amber-200">Transmission Non-Linearity</span>
-            <span class="rounded-full px-3 py-1 text-xs font-mono bg-amber-400/10 border border-amber-400/30 text-amber-200">High Backlash</span>
             <span class="rounded-full px-3 py-1 text-xs font-mono bg-amber-400/10 border border-amber-400/30 text-amber-200">Actuator Dynamics</span>
           </div>
         </div>
@@ -413,7 +413,7 @@
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">System Identification</span>
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">Real-Time Optimization (CasADi)</span>
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">Impedance Control</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Residual Learning (LIPM)</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Residual RL (LIPM)</span>
           </div>
         </div>
 
@@ -579,13 +579,12 @@
           <h3 class="font-mono text-sm text-accent uppercase tracking-widest mb-4">Robotic Control &amp; Optimization</h3>
           <div class="flex flex-wrap gap-2">
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">Whole-Body Control (WBC)</span>
+            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Model Predictive Control (MPC)</span>
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">Bipedal Locomotion</span>
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">Robotic Manipulation</span>
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">Impedance &amp; Force Control</span>
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">Kinematics &amp; Dynamics</span>
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">Trajectory Optimization</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">CasADi</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Pinocchio</span>
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">System Identification</span>
           </div>
         </div>
@@ -640,6 +639,8 @@
               <div class="flex flex-wrap gap-2">
                 <span class="tag rounded-full px-3 py-1 text-xs font-mono">Jetson Orin &amp; Thor</span>
                 <span class="tag rounded-full px-3 py-1 text-xs font-mono">Raspberry Pi</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">CasADi</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Pinocchio</span>
                 <span class="tag rounded-full px-3 py-1 text-xs font-mono">Docker</span>
                 <span class="tag rounded-full px-3 py-1 text-xs font-mono">Git</span>
                 <span class="tag rounded-full px-3 py-1 text-xs font-mono">CMake</span>
