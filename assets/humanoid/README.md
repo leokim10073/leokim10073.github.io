@@ -1,8 +1,8 @@
-# Humanoid technical evidence — asset staging
+# Humanoid technical evidence
 
-Staging area for public-facing visual evidence supporting the Humanoid case study's
-Kinematics & Real-Time Mapping section. No media is wired into `index.html` yet — this
-structure exists so files can be organized ahead of the Phase 5.5B integration pass.
+Public-facing visual evidence supporting the Humanoid case study's Kinematics &
+Real-Time Mapping section ("Kinematic Mapping & Operating-Range Analysis"), wired
+into `index.html` as of Phase 5.5B.
 
 ## Folders
 
@@ -17,7 +17,8 @@ parallel-linkage leg joints:
 - coupled joint behavior
 
 One subfolder per joint: `ankle/`, `knee/`, `thigh/`. A joint may have more than one
-clip (e.g. front and side views).
+clip (e.g. additional viewpoints); currently each joint has a single combined
+animation.
 
 ### `analysis/`
 
@@ -42,20 +43,23 @@ qualitative actuator-limit or singularity boundaries over exact actuator strokes
 mechanism dimensions, or joint limits. This is guidance for what gets exported here,
 not a legal disclaimer.
 
-## Suggested filenames
+## Committed files
 
 ```
-assets/humanoid/kinematics/ankle/ankle_front.gif
-assets/humanoid/kinematics/ankle/ankle_side.gif
-assets/humanoid/kinematics/knee/knee_mapping.gif
-assets/humanoid/kinematics/thigh/thigh_mapping.gif
+assets/humanoid/kinematics/ankle/ankle_mapping.gif   (~1.79 MB)
+assets/humanoid/kinematics/knee/knee_mapping.gif     (~350 KB)
+assets/humanoid/kinematics/thigh/thigh_mapping.gif   (~278 KB)
 
-assets/humanoid/analysis/ankle/ankle_determinant.png
-assets/humanoid/analysis/knee/knee_determinant.png
-assets/humanoid/analysis/thigh/thigh_determinant.png
+assets/humanoid/analysis/ankle/ankle_determinant.png (~318 KB)
+assets/humanoid/analysis/knee/knee_determinant.png   (~134 KB)
+assets/humanoid/analysis/thigh/thigh_determinant.png (~138 KB)
 ```
 
-These are naming suggestions only — no files currently exist in this structure
-(confirmed: no local ankle/knee/thigh/determinant/kinematics media was found in the
-working environment as of Phase 5.5A). Each subfolder currently holds only a
-`.gitkeep` placeholder so the empty structure is tracked by git.
+All six files are referenced from the Humanoid case study's "Kinematic Mapping &
+Operating-Range Analysis" subsection. The ankle determinant/knee/thigh figures link
+to their full-resolution PNG on click. `ankle_mapping.gif` is the largest asset at
+~1.8 MB — a future MP4/WebM conversion would reduce this if page weight becomes a
+concern; no such conversion has been done yet.
+
+The remaining empty leaf folders (if any) still hold a `.gitkeep` placeholder so the
+directory structure stays tracked by git.
