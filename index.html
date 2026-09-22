@@ -478,6 +478,22 @@
           Developing whole-body control for locomotion and manipulation on the AgiBot A3 humanoid, extending
           Berkeley's HITTER baseline toward generalized target selection and strike planning.
         </p>
+
+        <div class="relative space-y-3 mt-6">
+          <div>
+            <p class="text-xs font-mono text-accent uppercase tracking-widest mb-0.5">Whole-Body Control</p>
+            <p class="text-muted text-xs leading-relaxed">Coordinating locomotion and manipulation on a single policy stack for dynamic striking behavior — under active development.</p>
+          </div>
+          <div>
+            <p class="text-xs font-mono text-accent uppercase tracking-widest mb-0.5">Generalized Target Selection</p>
+            <p class="text-muted text-xs leading-relaxed">Extending Berkeley's HITTER baseline beyond its narrower target-selection formulation toward generalized target selection.</p>
+          </div>
+          <div>
+            <p class="text-xs font-mono text-accent uppercase tracking-widest mb-0.5">Strike Planning</p>
+            <p class="text-muted text-xs leading-relaxed">Investigating planning approaches for selecting striking behavior based on target objectives.</p>
+          </div>
+        </div>
+
         <div class="relative flex flex-wrap gap-2 mt-6">
           <span class="tag rounded-full px-3 py-1 text-xs font-mono">Whole-Body Control</span>
           <span class="tag rounded-full px-3 py-1 text-xs font-mono">Robot Learning</span>
@@ -590,48 +606,64 @@
         </p>
       </div>
 
-      <div class="space-y-8 mt-14">
-        <!-- 1: Fleet Scalability -->
+      <!-- Production Impact -->
+      <div class="mt-10 mb-10">
+        <p class="font-mono text-xs text-accent uppercase tracking-widest mb-3">Production Impact</p>
+        <div class="flex items-baseline gap-4 flex-wrap">
+          <span class="text-5xl sm:text-6xl font-bold text-white font-mono">75→93<span class="text-accent">%</span></span>
+          <span class="text-lg text-slate-200 font-medium">Autonomous Operation</span>
+        </div>
+        <p class="text-muted text-sm mt-2">Constrained industrial environments.</p>
+      </div>
+
+      <div class="space-y-8">
+        <!-- 1: System-Level Health Diagnosis -->
         <div class="card rounded-xl p-7 sm:p-9">
           <div class="flex items-start gap-4 mb-4">
             <span class="flex-shrink-0 w-10 h-10 rounded-full bg-accent/10 border border-accent/40 text-accent font-mono font-bold flex items-center justify-center">01</span>
             <div>
-              <p class="font-mono text-xs text-accent uppercase tracking-widest">Fleet Scalability</p>
-              <h4 class="text-xl font-bold text-white mt-1">Real-World Deployments at Scale</h4>
+              <p class="font-mono text-xs text-accent uppercase tracking-widest">Systems Engineering</p>
+              <h4 class="text-xl font-bold text-white mt-1">System-Level Health Diagnosis</h4>
             </div>
           </div>
           <p class="text-muted leading-relaxed">
-            Optimized <span class="text-slate-200">behavior planning</span> and <span class="text-slate-200">motion planning</span> algorithms for autonomous driving fleets, scaling the autonomous operation rate from <span class="text-slate-200">75% to 93%</span> within complex, constrained industrial environments.
+            Built a real-time <span class="text-slate-200">ROS2 system/topic health monitor</span> spanning sensing, localization, perception, and planning, helping field engineers distinguish <span class="text-slate-200">upstream data degradation</span> from <span class="text-slate-200">true planning infeasibility</span>.
           </p>
         </div>
 
-        <!-- 2: Geometric Polygon Junction Modeling -->
+        <!-- 2: Trajectory Optimization -->
         <div class="card rounded-xl p-7 sm:p-9">
           <div class="flex items-start gap-4 mb-4">
             <span class="flex-shrink-0 w-10 h-10 rounded-full bg-accent/10 border border-accent/40 text-accent font-mono font-bold flex items-center justify-center">02</span>
             <div>
-              <p class="font-mono text-xs text-accent uppercase tracking-widest">Junction Modeling</p>
-              <h4 class="text-xl font-bold text-white mt-1">Geometric Polygon Junction Modeling</h4>
+              <p class="font-mono text-xs text-accent uppercase tracking-widest">Planning &amp; Optimization</p>
+              <h4 class="text-xl font-bold text-white mt-1">Trajectory Optimization</h4>
             </div>
           </div>
           <p class="text-muted leading-relaxed">
-            At complex intersections, merging lanes cross and overlap rather than remaining strictly adjacent — causing traditional lane-following algorithms to detect insufficient driving space and fail. Using <span class="text-slate-200">behavior planning</span>, redesigned intersection navigation by modeling junctions as <span class="text-slate-200">geometric polygons</span> that break free from strict HD-map lane boundaries within the intersection area, enabling natural, flexible driving behavior similar to human navigation through open junction spaces.
+            Applied <span class="text-slate-200">trajectory optimization</span> tuned against intervention logs, balancing kinematic feasibility, collision margins, and ride comfort to raise autonomous operation from 75% to 93% in constrained industrial environments.
           </p>
         </div>
 
-        <!-- 3: Trajectory Optimization & Autoware -->
+        <!-- 3: Constrained Intersection Navigation -->
         <div class="card rounded-xl p-7 sm:p-9">
           <div class="flex items-start gap-4 mb-4">
             <span class="flex-shrink-0 w-10 h-10 rounded-full bg-accent/10 border border-accent/40 text-accent font-mono font-bold flex items-center justify-center">03</span>
             <div>
-              <p class="font-mono text-xs text-accent uppercase tracking-widest">Trajectory Optimization</p>
-              <h4 class="text-xl font-bold text-white mt-1">Multi-Constraint Trajectory Optimization &amp; Autoware</h4>
+              <p class="font-mono text-xs text-accent uppercase tracking-widest">Planning &amp; Optimization</p>
+              <h4 class="text-xl font-bold text-white mt-1">Constrained Intersection Navigation</h4>
             </div>
           </div>
           <p class="text-muted leading-relaxed">
-            Developed <span class="text-slate-200">multi-constraint trajectory optimization</span> balancing kinematic feasibility, collision margin, and ride comfort — integrated with <span class="text-slate-200">Autoware</span> to drive automated docking and reverse-parking workflows for wireless charging infrastructure.
+            Represented junctions as <span class="text-slate-200">geometric polygons</span> beyond HD-map lane boundaries, enabling constrained trajectory generation and dynamic-obstacle avoidance in confined spaces.
           </p>
         </div>
+      </div>
+
+      <!-- Fleet & Docking Workflows (smaller, supporting) -->
+      <div class="mt-6 pl-4 border-l-2 border-border">
+        <p class="text-xs font-mono text-accent uppercase tracking-widest mb-1">Fleet &amp; Docking Workflows</p>
+        <p class="text-muted text-sm leading-relaxed">Autoware-based fleet dispatch and reverse-docking workflows, enabling automated alignment with wireless-charging infrastructure.</p>
       </div>
 
       <div class="flex flex-wrap gap-2 mt-8">
@@ -809,8 +841,8 @@
           </div>
           <p class="text-accent2 font-medium mb-5">FIH Co., Ltd. (Subsidiary of Foxconn Group) · Software Research Center · New Taipei, Taiwan</p>
           <p class="text-muted leading-relaxed">
-            Diagnosed a sim-to-real gap in a learned locomotion policy and led development of the residual-RL and
-            real-time control pipeline that achieved 30 minutes of continuous walking on the proprietary humanoid.
+            Worked on humanoid locomotion, sim-to-real transfer, residual RL, system identification, and real-time
+            control for a proprietary humanoid with linear-actuator-driven parallel-linkage legs.
           </p>
           <div class="flex flex-wrap gap-2 mt-6">
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">Isaac Lab / Isaac Sim</span>
@@ -820,7 +852,7 @@
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">ROS 2</span>
           </div>
           <a href="#humanoid" class="inline-flex items-center gap-2 mt-7 rounded-md border border-accent/40 text-accent px-4 py-2 text-xs font-mono uppercase tracking-widest hover:bg-accent/10 hover:border-accent transition-colors">
-            Read Technical Case Study →
+            View Humanoid Case Study →
           </a>
         </div>
 
@@ -832,7 +864,8 @@
           </div>
           <p class="text-accent2 font-medium mb-5">Kingwaytek Technology Co., Ltd · Software Research Center · Taoyuan, Taiwan</p>
           <p class="text-muted leading-relaxed">
-            Spearheaded motion planning algorithms and site deployments for industrial autonomous vehicle fleets, scaling autonomous operation rates from 75% to 93% in constrained industrial environments using Autoware.
+            Worked on production autonomous-vehicle planning, trajectory optimization, ROS2 system health
+            monitoring, intersection navigation, and automated docking workflows.
           </p>
           <div class="flex flex-wrap gap-2 mt-6">
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">Autoware</span>
@@ -843,7 +876,7 @@
             <span class="tag rounded-full px-3 py-1 text-xs font-mono">ROS 2</span>
           </div>
           <a href="#av-planning" class="inline-flex items-center gap-2 mt-7 rounded-md border border-accent/40 text-accent px-4 py-2 text-xs font-mono uppercase tracking-widest hover:bg-accent/10 hover:border-accent transition-colors">
-            Read Technical Case Study →
+            View Autonomous Vehicle Work →
           </a>
         </div>
       </div>
@@ -877,18 +910,28 @@
         <h2 class="text-3xl font-bold text-white">Technical Skills</h2>
       </div>
 
+      <p class="text-muted text-sm max-w-2xl mb-8">Grouped by the taxonomy on my resume. Labels indicate how each skill was demonstrated — industry work, current research, project work, or graduate coursework — rather than a self-rated proficiency level.</p>
+
       <div class="grid sm:grid-cols-2 gap-6">
         <div class="card rounded-xl p-6">
-          <h3 class="font-mono text-sm text-accent uppercase tracking-widest mb-4">Robotic Control &amp; Optimization</h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Whole-Body Control (WBC)</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Model Predictive Control (MPC)</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Bipedal Locomotion</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Robotic Manipulation</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Impedance &amp; Force Control</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Kinematics &amp; Dynamics</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Trajectory Optimization</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">System Identification</span>
+          <h3 class="font-mono text-sm text-accent uppercase tracking-widest mb-4">Controls &amp; Optimization</h3>
+          <div class="space-y-4">
+            <div>
+              <p class="font-mono text-xs text-slate-300 uppercase tracking-widest mb-2">Industry</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Impedance Control (Humanoid)</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Force Control (Humanoid)</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">System Identification (Humanoid)</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Real-Time Control (Humanoid)</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Trajectory Optimization (AV)</span>
+              </div>
+            </div>
+            <div>
+              <p class="font-mono text-xs text-slate-300 uppercase tracking-widest mb-2">Graduate Coursework</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Model Predictive Control (MPC)</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -896,58 +939,66 @@
           <h3 class="font-mono text-sm text-accent uppercase tracking-widest mb-4">Robot Learning &amp; Simulation</h3>
           <div class="space-y-4">
             <div>
-              <p class="font-mono text-xs text-slate-300 uppercase tracking-widest mb-2">Robot Learning</p>
+              <p class="font-mono text-xs text-slate-300 uppercase tracking-widest mb-2">Industry</p>
               <div class="flex flex-wrap gap-2">
-                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Deep RL (PPO, Residual RL)</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Residual RL (Humanoid)</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">PPO (Humanoid)</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Isaac Lab / Isaac Sim (Humanoid)</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">MuJoCo (Humanoid)</span>
                 <span class="tag rounded-full px-3 py-1 text-xs font-mono">PyTorch</span>
                 <span class="tag rounded-full px-3 py-1 text-xs font-mono">LibTorch</span>
               </div>
             </div>
             <div>
-              <p class="font-mono text-xs text-slate-300 uppercase tracking-widest mb-2">Simulation &amp; Physics</p>
+              <p class="font-mono text-xs text-slate-300 uppercase tracking-widest mb-2">Current Work</p>
               <div class="flex flex-wrap gap-2">
-                <span class="tag rounded-full px-3 py-1 text-xs font-mono">NVIDIA Isaac Lab / Gym</span>
-                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Isaac Sim</span>
-                <span class="tag rounded-full px-3 py-1 text-xs font-mono">MuJoCo</span>
-                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Gazebo</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Whole-Body Control (Berkeley)</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Humanoid Manipulation (Berkeley)</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Strike Planning (Berkeley)</span>
+              </div>
+            </div>
+            <div>
+              <p class="font-mono text-xs text-slate-300 uppercase tracking-widest mb-2">Project</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Gazebo (Vision / Shelf Docking)</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="card rounded-xl p-6">
-          <h3 class="font-mono text-sm text-accent uppercase tracking-widest mb-4">Robotics Frameworks</h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">ROS / ROS 2</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">MoveIt 2</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Autoware</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">Nav2</span>
-            <span class="tag rounded-full px-3 py-1 text-xs font-mono">PCL</span>
-          </div>
-        </div>
-
-        <div class="card rounded-xl p-6">
-          <h3 class="font-mono text-sm text-accent uppercase tracking-widest mb-4">Programming Languages &amp; Tools</h3>
+        <div class="card rounded-xl p-6 sm:col-span-2">
+          <h3 class="font-mono text-sm text-accent uppercase tracking-widest mb-4">Robotics Software</h3>
           <div class="space-y-4">
             <div>
-              <p class="font-mono text-xs text-slate-300 uppercase tracking-widest mb-2">Languages</p>
+              <p class="font-mono text-xs text-slate-300 uppercase tracking-widest mb-2">Industry</p>
               <div class="flex flex-wrap gap-2">
-                <span class="tag rounded-full px-3 py-1 text-xs font-mono">C</span>
-                <span class="tag rounded-full px-3 py-1 text-xs font-mono">C++</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">C / C++</span>
                 <span class="tag rounded-full px-3 py-1 text-xs font-mono">Python</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">ROS2 (AV)</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Autoware (AV)</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">CasADi (Humanoid)</span>
               </div>
             </div>
             <div>
-              <p class="font-mono text-xs text-slate-300 uppercase tracking-widest mb-2">Tools &amp; Hardware</p>
+              <p class="font-mono text-xs text-slate-300 uppercase tracking-widest mb-2">Project / Research</p>
               <div class="flex flex-wrap gap-2">
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">MoveIt 2 (Vision)</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">PCL (Vision)</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Nav2 (Shelf Docking)</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">ROS2 Components (Shelf Docking)</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Cartographer / Hardware Integration (AMR Research)</span>
+              </div>
+            </div>
+            <div>
+              <p class="font-mono text-xs text-slate-300 uppercase tracking-widest mb-2">Tools</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Pinocchio</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Linux</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Git</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Docker</span>
+                <span class="tag rounded-full px-3 py-1 text-xs font-mono">CMake</span>
                 <span class="tag rounded-full px-3 py-1 text-xs font-mono">Jetson Orin &amp; Thor</span>
                 <span class="tag rounded-full px-3 py-1 text-xs font-mono">Raspberry Pi</span>
-                <span class="tag rounded-full px-3 py-1 text-xs font-mono">CasADi</span>
-                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Pinocchio</span>
-                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Docker</span>
-                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Git</span>
-                <span class="tag rounded-full px-3 py-1 text-xs font-mono">CMake</span>
-                <span class="tag rounded-full px-3 py-1 text-xs font-mono">Linux (Ubuntu)</span>
               </div>
             </div>
           </div>
