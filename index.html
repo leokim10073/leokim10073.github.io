@@ -391,14 +391,14 @@
           <p class="text-xs text-muted/70 mt-4 italic max-w-3xl">Exact production mechanism geometry, dimensional parameters, actuator-stroke values, and numerical singularity limits are omitted from this public presentation.</p>
 
           <!-- Kinematic Mapping & Operating-Range Analysis evidence -->
-          <div class="mt-8 pt-6 border-t border-border/60 max-w-4xl">
+          <div class="mt-8 pt-6 border-t border-border/60 max-w-5xl">
             <p class="font-mono text-xs text-accent uppercase tracking-widest mb-1">Kinematic Mapping &amp; Operating-Range Analysis</p>
             <p class="text-muted text-sm mb-6">Public-facing visualizations of nonlinear joint-to-actuator mapping and singularity-aware workspace analysis.</p>
 
             <!-- Featured: Ankle -->
-            <div class="mb-8">
+            <div class="mb-10">
               <p class="text-xs font-mono text-accent2 uppercase tracking-widest mb-3">Ankle — 2-DOF Coupled Mapping</p>
-              <div class="grid sm:grid-cols-2 gap-4 items-start">
+              <div class="grid md:grid-cols-[42fr_58fr] gap-5 items-start">
                 <figure>
                   <img src="assets/humanoid/kinematics/ankle/ankle_mapping.gif" alt="2-DOF ankle parallel-linkage kinematic mapping animation" loading="lazy" class="w-full h-auto rounded-lg border border-border" />
                   <figcaption class="text-xs text-muted mt-2 leading-relaxed">Coupled pitch/roll motion mapped to the extension of two linear actuators.</figcaption>
@@ -414,11 +414,11 @@
               </div>
             </div>
 
-            <!-- Secondary: Knee | Thigh -->
-            <div class="grid sm:grid-cols-2 gap-6">
+            <!-- Secondary: Knee, then Thigh (each full-width so analysis plots stay legible) -->
+            <div class="space-y-8">
               <div>
                 <p class="text-xs font-mono text-accent2 uppercase tracking-widest mb-3">Knee Mapping</p>
-                <div class="grid grid-cols-2 gap-3">
+                <div class="grid md:grid-cols-[38fr_62fr] gap-5 items-start">
                   <img src="assets/humanoid/kinematics/knee/knee_mapping.gif" alt="Knee joint-to-linear-actuator kinematic mapping animation" loading="lazy" class="w-full h-auto rounded-lg border border-border" />
                   <a href="assets/humanoid/analysis/knee/knee_determinant.png" target="_blank" rel="noopener noreferrer">
                     <img src="assets/humanoid/analysis/knee/knee_determinant.png" alt="Knee actuator-range and Jacobian operating-region analysis" loading="lazy" class="w-full h-auto rounded-lg border border-border hover:border-accent/40 transition-colors" />
@@ -428,7 +428,7 @@
               </div>
               <div>
                 <p class="text-xs font-mono text-accent2 uppercase tracking-widest mb-3">Thigh Mapping</p>
-                <div class="grid grid-cols-2 gap-3">
+                <div class="grid md:grid-cols-[38fr_62fr] gap-5 items-start">
                   <img src="assets/humanoid/kinematics/thigh/thigh_mapping.gif" alt="Thigh joint-to-linear-actuator kinematic mapping animation" loading="lazy" class="w-full h-auto rounded-lg border border-border" />
                   <a href="assets/humanoid/analysis/thigh/thigh_determinant.png" target="_blank" rel="noopener noreferrer">
                     <img src="assets/humanoid/analysis/thigh/thigh_determinant.png" alt="Thigh actuator-range and Jacobian operating-region analysis" loading="lazy" class="w-full h-auto rounded-lg border border-border hover:border-accent/40 transition-colors" />

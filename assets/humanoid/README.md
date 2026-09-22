@@ -2,7 +2,7 @@
 
 Public-facing visual evidence supporting the Humanoid case study's Kinematics &
 Real-Time Mapping section ("Kinematic Mapping & Operating-Range Analysis"), wired
-into `index.html` as of Phase 5.5B.
+into `index.html` in Phase 5.5B and layout-refined in Phase 5.5C.
 
 ## Folders
 
@@ -43,23 +43,25 @@ qualitative actuator-limit or singularity boundaries over exact actuator strokes
 mechanism dimensions, or joint limits. This is guidance for what gets exported here,
 not a legal disclaimer.
 
-## Committed files
+## Committed files (final, as of Phase 5.5C)
 
-```
-assets/humanoid/kinematics/ankle/ankle_mapping.gif   (~1.79 MB)
-assets/humanoid/kinematics/knee/knee_mapping.gif     (~350 KB)
-assets/humanoid/kinematics/thigh/thigh_mapping.gif   (~278 KB)
+| File | Dimensions | Size |
+|---|---|---|
+| `kinematics/ankle/ankle_mapping.gif` | 800×1000 | ~1.24 MB |
+| `kinematics/knee/knee_mapping.gif` | 800×1000 | ~485 KB |
+| `kinematics/thigh/thigh_mapping.gif` | 800×1000 | ~352 KB |
+| `analysis/ankle/ankle_determinant.png` | 1136×1485 | ~288 KB |
+| `analysis/knee/knee_determinant.png` | 1185×1483 | ~122 KB |
+| `analysis/thigh/thigh_determinant.png` | 1185×1483 | ~130 KB |
 
-assets/humanoid/analysis/ankle/ankle_determinant.png (~318 KB)
-assets/humanoid/analysis/knee/knee_determinant.png   (~134 KB)
-assets/humanoid/analysis/thigh/thigh_determinant.png (~138 KB)
-```
+These are the final, manually reframed/cropped source assets — treat them as
+authoritative; do not re-crop or regenerate. All six are referenced from the
+Humanoid case study's "Kinematic Mapping & Operating-Range Analysis" subsection.
+The three `analysis/*_determinant.png` figures link to their full-resolution file
+on click. `ankle_mapping.gif` is the largest asset at ~1.24 MB — a future MP4/WebM
+conversion would reduce this if page weight becomes a concern; no such conversion
+has been done.
 
-All six files are referenced from the Humanoid case study's "Kinematic Mapping &
-Operating-Range Analysis" subsection. The ankle determinant/knee/thigh figures link
-to their full-resolution PNG on click. `ankle_mapping.gif` is the largest asset at
-~1.8 MB — a future MP4/WebM conversion would reduce this if page weight becomes a
-concern; no such conversion has been done yet.
-
-The remaining empty leaf folders (if any) still hold a `.gitkeep` placeholder so the
-directory structure stays tracked by git.
+Note: a duplicate file (`kinematics/ankle/Thigh_Animation_Only.gif`, byte-identical
+to `kinematics/thigh/thigh_mapping.gif`) was found misplaced in the ankle folder
+during Phase 5.5C and removed — it was never referenced from `index.html`.
