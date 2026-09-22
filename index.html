@@ -3,9 +3,37 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Tien-Chun (Leo) Chen — Robotics Controls &amp; Sim-to-Real Engineer</title>
-<meta name="description" content="Portfolio of Tien-Chun (Leo) Chen, Robotics Controls &amp; Sim-to-Real Engineer specializing in humanoid locomotion, residual reinforcement learning, and sim-to-real control." />
+<title>Tien-Chun (Leo) Chen | Robotics Controls &amp; Sim-to-Real Engineer</title>
+<meta name="description" content="Robotics Controls &amp; Sim-to-Real Engineer working across humanoid locomotion, robot learning, real-time control, autonomous vehicles, and physical robot deployment. M.Eng. EECS candidate at UC Berkeley." />
+<link rel="canonical" href="https://leokim10073.github.io/" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>" />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://leokim10073.github.io/" />
+<meta property="og:title" content="Tien-Chun (Leo) Chen | Robotics Controls &amp; Sim-to-Real Engineer" />
+<meta property="og:description" content="Robotics Controls &amp; Sim-to-Real Engineer working across humanoid locomotion, robot learning, real-time control, autonomous vehicles, and physical robot deployment. M.Eng. EECS candidate at UC Berkeley." />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Tien-Chun (Leo) Chen | Robotics Controls &amp; Sim-to-Real Engineer" />
+<meta name="twitter:description" content="Robotics Controls &amp; Sim-to-Real Engineer working across humanoid locomotion, robot learning, real-time control, autonomous vehicles, and physical robot deployment." />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Tien-Chun (Leo) Chen",
+  "jobTitle": "Robotics Controls & Sim-to-Real Engineer",
+  "url": "https://leokim10073.github.io/",
+  "sameAs": [
+    "https://www.linkedin.com/in/chentienchun",
+    "https://github.com/leokim10073"
+  ],
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "University of California, Berkeley" },
+    { "@type": "CollegeOrUniversity", "name": "National Yang Ming Chiao Tung University" }
+  ]
+}
+</script>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
@@ -76,6 +104,11 @@
   .cursor-blink { animation: blink 1s step-end infinite; }
   .metric-tile { transition: border-color .2s ease, transform .2s ease; }
   .metric-tile:hover { border-color: rgba(34,211,238,0.4); transform: translateY(-1px); }
+  a:focus-visible, button:focus-visible, iframe:focus-visible {
+    outline: 2px solid #22d3ee;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
 </style>
 </head>
 <body class="bg-bg text-slate-200 font-sans antialiased">
@@ -84,7 +117,7 @@
   <header class="fixed top-0 inset-x-0 z-50 border-b border-border/80 bg-bg/80 backdrop-blur-md">
     <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
       <a href="#top" class="font-mono text-sm text-accent tracking-widest">TC<span class="text-slate-500">.</span>CHEN</a>
-      <nav class="hidden md:flex items-center gap-7 font-mono text-xs uppercase tracking-widest text-muted">
+      <nav class="hidden lg:flex items-center gap-6 font-mono text-xs uppercase tracking-widest text-muted">
         <a href="#selected-work" class="nav-link hover:text-accent transition-colors">Selected Work</a>
         <a href="#humanoid" class="nav-link hover:text-accent transition-colors">Humanoid</a>
         <a href="#pingpong" class="nav-link hover:text-accent transition-colors">Ping-Pong</a>
@@ -93,12 +126,13 @@
         <a href="#education" class="nav-link hover:text-accent transition-colors">Education</a>
         <a href="#contact" class="nav-link hover:text-accent transition-colors">Contact</a>
       </nav>
-      <a href="resume.pdf" class="hidden md:inline-flex items-center gap-2 rounded-full border border-accent/40 text-accent px-4 py-1.5 text-xs font-mono uppercase tracking-widest hover:bg-accent/10 transition-colors">
+      <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 rounded-full border border-accent/40 text-accent px-4 py-1.5 text-xs font-mono uppercase tracking-widest hover:bg-accent/10 transition-colors">
         Resume
       </a>
     </div>
   </header>
 
+  <main>
   <!-- HERO -->
   <section id="top" class="relative overflow-hidden pt-40 pb-24 px-6">
     <div class="absolute inset-0 grid-bg fade-mask opacity-70"></div>
@@ -125,7 +159,7 @@
       </div>
 
       <div class="mt-8 flex flex-wrap items-center gap-4">
-        <a href="resume.pdf" class="inline-flex items-center gap-2 rounded-md bg-accent text-bg font-semibold px-5 py-2.5 text-sm hover:bg-cyan-300 transition-colors shadow-glow">
+        <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-md bg-accent text-bg font-semibold px-5 py-2.5 text-sm hover:bg-cyan-300 transition-colors shadow-glow">
           View Resume
         </a>
         <a href="https://github.com/leokim10073" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-md border border-border px-5 py-2.5 text-sm font-semibold text-slate-200 hover:border-accent/50 hover:text-accent transition-colors">
@@ -563,11 +597,11 @@
           <div class="relative aspect-video rounded-xl overflow-hidden border border-border bg-bg/60">
             <iframe
               class="absolute inset-0 w-full h-full"
-              src="https://www.youtube.com/embed/Ddymc6k_bpg"
+              src="https://www.youtube-nocookie.com/embed/Ddymc6k_bpg"
               title="Vision-based manipulation simulation"
               loading="lazy"
               frameborder="0"
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
           </div>
           <p class="text-muted text-xs mt-3 leading-relaxed">Simulation validation of the perception-to-planning workflow before physical execution.</p>
@@ -577,11 +611,11 @@
           <div class="relative aspect-video rounded-xl overflow-hidden border border-border bg-bg/60">
             <iframe
               class="absolute inset-0 w-full h-full"
-              src="https://www.youtube.com/embed/-7of2jbOiUU"
+              src="https://www.youtube-nocookie.com/embed/-7of2jbOiUU"
               title="Vision-based manipulation physical UR3e demo"
               loading="lazy"
               frameborder="0"
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
           </div>
           <p class="text-muted text-xs mt-3 leading-relaxed">Physical UR3e execution integrating depth-camera perception, target selection, constrained Cartesian motion, and real-robot placement.</p>
@@ -596,7 +630,7 @@
       <div class="mb-6">
         <p class="font-mono text-xs text-accent uppercase tracking-widest mb-3">05 / Case Study &bull; Autonomous Vehicle Planning</p>
         <h2 class="text-3xl sm:text-4xl font-bold text-white leading-tight max-w-3xl">
-          Industrial Autonomous Vehicle Fleet &amp; Motion Planning
+          Autonomous Vehicle Planning &amp; System Reliability
         </h2>
         <p class="mt-4 max-w-3xl text-muted leading-relaxed">
           Scaling <span class="text-slate-200">behavior planning</span> and motion planning algorithms for autonomous
@@ -623,7 +657,7 @@
             <span class="flex-shrink-0 w-10 h-10 rounded-full bg-accent/10 border border-accent/40 text-accent font-mono font-bold flex items-center justify-center">01</span>
             <div>
               <p class="font-mono text-xs text-accent uppercase tracking-widest">Systems Engineering</p>
-              <h4 class="text-xl font-bold text-white mt-1">System-Level Health Diagnosis</h4>
+              <h3 class="text-xl font-bold text-white mt-1">System-Level Health Diagnosis</h3>
             </div>
           </div>
           <p class="text-muted leading-relaxed">
@@ -637,7 +671,7 @@
             <span class="flex-shrink-0 w-10 h-10 rounded-full bg-accent/10 border border-accent/40 text-accent font-mono font-bold flex items-center justify-center">02</span>
             <div>
               <p class="font-mono text-xs text-accent uppercase tracking-widest">Planning &amp; Optimization</p>
-              <h4 class="text-xl font-bold text-white mt-1">Trajectory Optimization</h4>
+              <h3 class="text-xl font-bold text-white mt-1">Trajectory Optimization</h3>
             </div>
           </div>
           <p class="text-muted leading-relaxed">
@@ -651,7 +685,7 @@
             <span class="flex-shrink-0 w-10 h-10 rounded-full bg-accent/10 border border-accent/40 text-accent font-mono font-bold flex items-center justify-center">03</span>
             <div>
               <p class="font-mono text-xs text-accent uppercase tracking-widest">Planning &amp; Optimization</p>
-              <h4 class="text-xl font-bold text-white mt-1">Constrained Intersection Navigation</h4>
+              <h3 class="text-xl font-bold text-white mt-1">Constrained Intersection Navigation</h3>
             </div>
           </div>
           <p class="text-muted leading-relaxed">
@@ -707,6 +741,8 @@
             <img
               src="assets/amr/amr_sensor.jpg"
               alt="Custom autonomous mobile robot with onboard sensing"
+              width="160"
+              height="120"
               class="w-40 h-auto max-w-full rounded-lg border border-border mx-auto sm:mx-0"
               loading="lazy"
               onerror="this.parentElement.style.display='none'" />
@@ -716,6 +752,8 @@
             <img
               src="assets/amr/amr_tool_connector.jpg"
               alt="AMR with modular top-mounted tool-interface prototype"
+              width="1280"
+              height="960"
               class="w-full h-auto max-w-xl rounded-lg border border-border"
               loading="lazy"
               onerror="this.parentElement.style.display='none'" />
@@ -744,11 +782,11 @@
           <div class="relative aspect-video rounded-lg overflow-hidden border border-border bg-bg/60 mb-3">
             <iframe
               class="absolute inset-0 w-full h-full"
-              src="https://www.youtube.com/embed/eYSYurGJ0aA"
+              src="https://www.youtube-nocookie.com/embed/eYSYurGJ0aA"
               title="AMR rack docking Gazebo simulation"
               loading="lazy"
               frameborder="0"
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
           </div>
           <p class="text-muted text-xs mb-4">Navigate → Localize Rack → Dock → Pick Up / Transport</p>
@@ -788,11 +826,11 @@
           <div class="relative aspect-video rounded-lg overflow-hidden border border-border bg-bg/60 mb-3">
             <iframe
               class="absolute inset-0 w-full h-full"
-              src="https://www.youtube.com/embed/Owe4wwNu96c"
+              src="https://www.youtube-nocookie.com/embed/Owe4wwNu96c"
               title="Automated warehouse physical system demo"
               loading="lazy"
               frameborder="0"
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
           </div>
           <p class="text-muted text-xs mb-4">
@@ -893,7 +931,7 @@
       <div class="md:col-span-2">
         <p class="text-muted leading-relaxed text-lg">
           I'm a robotics engineer working at the intersection of control, learning, and physical robot deployment.
-          My <span class="text-slate-200 font-medium">2 years of industry experience</span> spans autonomous
+          I have <span class="text-slate-200 font-medium">2 years of industry experience</span> spanning autonomous
           vehicles and humanoid locomotion, with a particular focus on understanding why algorithms fail when they
           meet real hardware. I'm currently pursuing an M.Eng. in EECS at UC Berkeley, extending this foundation
           toward whole-body robot learning.
@@ -1031,7 +1069,7 @@
             <h3 class="text-lg font-bold text-white">National Yang Ming Chiao Tung University (NYCU)</h3>
             <p class="text-accent2 font-medium mt-1">B.S. in Mechanical Engineering; Double Major in Electrical Engineering</p>
             <p class="text-muted text-sm mt-2">Overall GPA: 3.85/4.30 · Major GPA: 4.11/4.30</p>
-            <p class="text-muted text-sm mt-1">Academic Excellence Award — Top 3% (of 110 students), 2021 &amp; 2022</p>
+            <p class="text-muted text-sm mt-1">Academic Excellence Awards — Top 3% (of 110 students), 2021 &amp; 2022</p>
           </div>
           <span class="font-mono text-xs text-accent border border-accent/30 rounded-full px-3 py-1 whitespace-nowrap">09/2018 – 07/2022</span>
         </div>
@@ -1050,7 +1088,7 @@
         Open to conversations on humanoid locomotion, robot learning, and sim-to-real control. Reach out any time.
       </p>
       <div class="flex flex-wrap items-center justify-center gap-4">
-        <a href="resume.pdf" class="inline-flex items-center gap-2 rounded-md bg-accent text-bg font-semibold px-6 py-3 text-sm hover:bg-cyan-300 transition-colors shadow-glow">
+        <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-md bg-accent text-bg font-semibold px-6 py-3 text-sm hover:bg-cyan-300 transition-colors shadow-glow">
           View Resume
         </a>
         <a href="https://github.com/leokim10073" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-md border border-border px-6 py-3 text-sm font-semibold text-slate-200 hover:border-accent/50 hover:text-accent transition-colors">
@@ -1065,6 +1103,7 @@
       </div>
     </div>
   </section>
+  </main>
 
   <footer class="px-6 py-8 border-t border-border">
     <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-3 text-xs text-muted font-mono">
