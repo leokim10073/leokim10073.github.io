@@ -922,6 +922,76 @@
     </div>
   </section>
 
+  <!-- HACKATHONS -->
+  <section id="hackathons" class="px-6 py-20 border-t border-border bg-surface/40 scroll-mt-16">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-14">
+        <p class="font-mono text-xs text-accent uppercase tracking-widest mb-2">07 / Hackathons</p>
+        <h2 class="text-3xl font-bold text-white">Beyond Robotics</h2>
+        <p class="mt-3 max-w-2xl text-muted">Fast team builds outside my main field.</p>
+      </div>
+
+      <!-- Gossip Window -->
+      <div class="card rounded-xl p-6 sm:p-8">
+        <div class="flex flex-wrap items-start justify-between gap-3 mb-1">
+          <h3 class="text-lg font-bold text-white">Gossip Window</h3>
+          <span class="font-mono text-xs text-accent border border-accent/30 rounded-full px-3 py-1 whitespace-nowrap">10/2026</span>
+        </div>
+        <p class="text-accent2 text-sm font-medium mb-5">CalHacks · Team Project</p>
+
+        <div class="flex flex-col sm:flex-row gap-6 items-start mb-6">
+          <figure class="flex-shrink-0 w-full sm:w-48">
+            <img
+              src="assets/gossip-window/map.png"
+              alt="Gossip Window Map: people and their stories drawn as a live graph"
+              width="1184"
+              height="1666"
+              class="w-48 h-auto max-w-full rounded-lg border border-border mx-auto sm:mx-0"
+              loading="lazy"
+              onerror="this.parentElement.style.display='none'" />
+            <figcaption class="text-xs text-muted mt-2 text-center sm:text-left">The Map — people and stories drawn live from what the AI tracks.</figcaption>
+          </figure>
+
+          <div class="flex-1 min-w-0">
+            <p class="text-muted text-sm leading-relaxed mb-5">
+              A voice room for friends telling stories. An AI companion listens, tracks who and what is being talked
+              about, and catches up a friend who joins late with a short spoken recap — then quietly reminds them of
+              earlier stories when someone is mentioned again, even as "he" or "the roommate."
+            </p>
+
+            <div class="space-y-3 mb-5">
+              <div>
+                <p class="text-xs font-mono text-accent uppercase tracking-widest mb-0.5">Fast / Slow Model Split</p>
+                <p class="text-muted text-xs leading-relaxed">Claude Haiku checks every new line for a callback to a known person or story; Claude Sonnet rebuilds the people, stories and recap about every 25 seconds.</p>
+              </div>
+              <div>
+                <p class="text-xs font-mono text-accent uppercase tracking-widest mb-0.5">Better Silent Than Wrong</p>
+                <p class="text-muted text-xs leading-relaxed">The model answers plain questions instead of scoring itself; fixed rules turn the answers into a confidence score, and nothing pops up below 0.7.</p>
+              </div>
+            </div>
+
+            <div class="rounded-lg border border-border bg-bg/40 p-3">
+              <p class="text-xs font-mono text-accent uppercase tracking-widest mb-1">My Role</p>
+              <p class="text-muted text-xs leading-relaxed">Originated the product concept — the live relation map, mention-triggered story cards, and AI inference over who is being referenced — and designed and built the full frontend (map, pop-ups, story cards). Co-tuned the recall confidence threshold with the team through live testing.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-2">
+          <span class="tag rounded-full px-3 py-1 text-xs font-mono">React</span>
+          <span class="tag rounded-full px-3 py-1 text-xs font-mono">React Flow</span>
+          <span class="tag rounded-full px-3 py-1 text-xs font-mono">Convex</span>
+          <span class="tag rounded-full px-3 py-1 text-xs font-mono">Claude API</span>
+          <span class="tag rounded-full px-3 py-1 text-xs font-mono">Cartesia</span>
+          <span class="tag rounded-full px-3 py-1 text-xs font-mono">LiveKit</span>
+        </div>
+        <a href="https://github.com/leokim10073/MY-MACPRO-X4" target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-7 rounded-md border border-accent/40 text-accent px-4 py-2 text-xs font-mono uppercase tracking-widest hover:bg-accent/10 hover:border-accent transition-colors">
+          View on GitHub ↗
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- WORK EXPERIENCE -->
   <section id="experience" class="px-6 py-20 border-t border-border bg-surface/40">
     <div class="max-w-6xl mx-auto">
